@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/client_admin/server/project-jsp.iml" filepath="$PROJECT_DIR$/client_admin/server/project-jsp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/project-ssm.iml" filepath="$PROJECT_DIR$/server/project-ssm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/校园快递代领系统.iml" filepath="$PROJECT_DIR$/.idea/校园快递代领系统.iml" />
+    </modules>
+  </component>
+</project>

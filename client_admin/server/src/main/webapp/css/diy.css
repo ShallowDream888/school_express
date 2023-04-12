@@ -1,0 +1,1679 @@
+.layui-logo {
+    width: 235px !important;
+}
+
+.layui-side li {
+    width: 235px !important;
+}
+
+.layui-layout-body,
+.layui-side,
+.layui-side-scroll {
+    padding-right: 35px;
+}
+
+.layui-laypage-count::before {
+    content: '合计';
+}
+.table{
+    margin-left: 35px;
+}
+.section1 h1{
+    margin-left: 40px;
+}
+/*  前面是固定模块 勿动  */
+
+article {
+    width: 100%;
+    height: 100vh;
+}
+
+.sign_in .warp .layui-container .layui-row .layui-form .layui-form-item .layui-input-block .layui-textarea{
+    width: 430px !important;
+}
+
+.sign_in .warp .layui-container .layui-row .layui-form .layui-form-item .layui-input-block .layui-layedit{
+    margin-left: 60px;
+    border: 2px solid;
+}
+
+.layui-layedit-tool{
+    border-bottom: 1px solid;
+}
+
+.section1 .buts{
+    display: flex;
+    justify-content: space-around;
+}
+
+.layui-table-fixed{
+    /* display: none; */
+}
+
+.layui-table-view .layui-table td, .layui-table-view .layui-table th{
+    padding: 9px 15px !important;
+    height: 100px !important;
+}
+.section1{
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: #d2d8e4;
+}
+
+
+/* .section1 .manu .buts .layui-btn-normal{
+    background-color: #99ddcc !important;
+border-radius: 5px;
+} */
+
+.section1 .buts .layui-btn{
+    background-color: #99ddcc !important;
+border-radius: 5px;
+}
+
+.section1 .manu .layui-form .layui-form-item .layui-input-block .layui-input{
+    max-width: 245px;
+}
+
+.layui-col-md .layui-panel #i{
+    width: 175px;
+    height: 70px;
+    line-height: 70px;
+    right: 20px !important;
+    background: url(../img/biankuang.png) no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+}
+.section1 .layui-form .layui-table-tool{
+    background-color: #f6f6f6;
+}
+.section1 .layui-form .layui-table-box  thead tr{
+background-color: #c5d1e0;
+}
+
+.section1 .layui-form .layui-table-main tr:nth-child(2n+1){
+background-color: #bad7df;
+}
+
+.section1 .layui-form .layui-table-main tr:nth-child(2n){
+background-color: #f6f6f6;
+}
+
+.section1 .layui-form .layui-table-body tr:nth-child(2n+1){
+background-color: #dfe5ec;
+}
+
+.section1 .layui-form .layui-table-body tr:nth-child(2n){
+    background-color: #c5d1e0;
+
+}
+    
+.section1 .layui-form-item .layui-form-label {
+    width: 130px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #72c7b2;
+}
+
+.section1 .layui-form-item .layui-input-block .layui-input {
+    max-width: 245px;
+}
+
+/* .section1 .manu .layui-form .layui-form-item{
+    display: flex;
+    flex-wrap: wrap;
+}
+*/
+
+.section1 .manu .layui-form .layui-form-item>div{
+    /* width: 500px; */
+    margin-bottom: 20px;
+} 
+
+.section1 .manu .layui-form .layui-form-item .layui-input-block .layui-unselect .layui-anim{
+    min-width: 245px !important;
+    left: 50px !important;
+}
+
+.layui-form-select .layui-edge{
+    right: 1295px !important;
+}
+
+/* .sign_in .warp .layui-container .layui-row .layui-form .layui-form-item .layui-upload-drag{
+    right: 100px;
+} */
+
+
+/* 登录界面 */
+.login body article .warp {
+    background-image: url(../img/bg.jpg);
+    /* background:linear-gradient(45deg,#667878, #899b9f,#f1edca); */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.login body article .warp .layui-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign_in .warp .layui-container .layui-row .layui-form #mall_users .layui-form-item .layui-upload .layui-upload-list #resume_img {
+    width: 200px;
+    height: 200px;
+}
+
+.login body article .warp .layui-container .layui-row {
+    width: 600px;
+    border-radius: 25px;
+    text-align: center;
+    /* background: url(../img/login-bg.png) no-repeat;
+    background-position: center;
+    background-size: cover; */
+    background-color: rgba(193,247,249,0.3);
+    padding-bottom: 25px;
+}
+
+.login body article .warp .layui-container .layui-row .layui-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+padding-top:0px !important ;
+}
+
+.login body article .warp .layui-container .layui-row .layui-form .layui-form-item{
+    margin-bottom: 40px !important;
+}
+
+.login body article .warp .layui-container .layui-row .layui-form .layui-form-item .layui-form-label {
+    /* color: #f08a5d; */
+    color: #295B90;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: end;
+    width: 80px;
+    padding: 9px 5px !important;
+}
+
+.login body article .warp .layui-container .layui-row div span h1 {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+    font-weight: 700;
+    /* color: #ED2553; */
+    color: #295B90;
+}
+
+.login body article .warp .layui-container .layui-row .layui-form .layui-form-item {
+    width: 450px;
+}
+
+.login body article .warp .layui-btn-container{
+display: flex !important;
+flex-direction: row !important;
+justify-content: space-around !important;
+position: relative;
+}
+
+.login body article .warp .layui-btn-container .layui-btn {
+    width: 300px !important;
+    height: 50px;
+    line-height: 45px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 10px;
+    color: #2A4A63;
+    border: 2px solid #2A4A63;
+    background: transparent;
+	margin: 0.2rem auto;
+}
+
+.login body article .warp .layui-btn-container .layui-btn:nth-of-type(1){
+}
+
+.login body article .warp .layui-btn-container .layui-btn:nth-of-type(2){
+    /* border: none;
+    width: 350px !important;
+    letter-spacing: 3px;
+    padding-top: 10px; */
+    /* float: left; */
+}
+
+.login body article .warp .layui-btn-container .layui-btn:nth-of-type(3) {
+    font-size: 14px;
+    width: 100% !important;
+    border: none;
+display: block;
+position: absolute;
+bottom: -40px;
+left: 50%;
+transform: translateX(-50%);
+}
+
+.login body article .warp .layui-container .layui-row .layui-form .layui-form-item .layui-input-block .layui-input {
+    max-width: 295px;
+    background: #e8f0fe;
+}
+
+/* 忘记密码 */
+.forgot body .sign_in .warp-forgot .layui-container .layui-row .layui-form #phone .layui-form-item .layui-input-block,
+.forgot body .sign_in .warp-forgot .layui-container .layui-row .layui-form #email .layui-form-item .layui-input-block {
+    display: flex;
+    max-width: 245px;
+}
+
+.forgot body .sign_in .warp .layui-container .layui-row .layui-form #mall_users .layui-form-item .layui-upload div .layui-progress {
+    left: 155px;
+}
+
+.forgot body article .warp {
+    background-image: url(../img/9.png);
+    /* background:linear-gradient(45deg,#667878, #899b9f,#f1edca); */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.forgot body article .warp .layui-container {
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forgot body .sign_in .warp .layui-container .layui-row .layui-form #mall_users .layui-form-item .layui-upload .layui-upload-list #resume_img {
+    width: 200px;
+    height: 200px;
+}
+
+.forgot body article .warp .layui-container .layui-row {
+    width: 600px;
+    border-radius: 25px;
+    text-align: center;
+    /* background: url(../img/login-bg.png) no-repeat; */
+    /* background-position: center; */
+    /* background-size: cover; */
+    background-color: rgba(193,247,249,0.3);
+    padding-bottom: 25px;
+}
+
+.forgot body article .warp .layui-container .layui-row .layui-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forgot body article .warp .layui-container .layui-row .layui-form .layui-form-item .layui-form-label {
+    color: #295B90;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: end;
+    width: 80px;
+    padding: 9px 5px !important;
+}
+
+.forgot body article .warp .layui-btn-container .layui-btn {
+    width: 200px !important;
+    height: 40px;
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #295B90 !important;
+    border: 2px solid #295B90 !important;
+    background: transparent;
+}
+
+.forgot body article .warp .layui-container .layui-row div span h1 {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #295B90;
+}
+
+.forgot body article .warp .layui-container .layui-row .layui-form .layui-form-item {
+    width: 400px;
+}
+
+.forgot body article .warp .layui-btn-container .layui-btn {
+    width: 200px !important;
+    height: 40px;
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #295B90;
+    border: 2px solid #295B90;
+    background: transparent;
+}
+
+.forgot body article .warp .layui-btn-container .layui-btn:hover{
+    background-color: rgba(193,247,249,0.3) !important;
+}
+
+.forgot body article .warp .layui-container .layui-row .layui-form .layui-form-item .layui-input-block .layui-input {
+    max-width: 245px;
+    background: #e8f0fe;
+}
+
+.forgot body .sign_in .warp .layui-container .layui-row .layui-form .layui-form-item .layui-input-block .layui-unselect {
+    max-width: 245px;
+}
+
+
+
+
+
+/* 注册页面 */
+.register body .sign_in .warp .layui-container .layui-row .layui-form #mall_users .layui-form-item .layui-upload div .layui-progress {
+    left: 0px;
+}
+
+.register body article .warp {
+    background-image: url(../img/9.png);
+    /* background:linear-gradient(45deg,#667878, #899b9f,#f1edca); */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.register body article .warp .layui-container {
+    padding-top: 0px;
+    padding-bottom: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register body .sign_in .warp .layui-container .layui-row .layui-form #mall_users .layui-form-item .layui-upload .layui-upload-list #resume_img {
+    width: 200px;
+    height: 200px;
+}
+
+.register body article .warp .layui-container .layui-row {
+    width: 600px;
+    border-radius: 25px;
+    text-align: center;
+    /* background: url(../img/9.png) no-repeat;
+    background-position: center;
+    background-size: cover; */
+    padding-bottom: 25px;
+    background-color: rgba(193,247,249,0.4);
+}
+
+.register body article .warp .layui-container .layui-row .layui-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.register body article .warp .layui-container .layui-row .layui-form .layui-form-item .layui-form-label {
+    color: #333f44;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: end;
+    width: 80px;
+    padding: 9px 5px !important;
+}
+
+.register body article .warp .layui-btn-container .layui-btn {
+    width: 200px !important;
+    height: 40px;
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #333f44 !important;
+    border: 2px solid #333f44 !important;
+    /* background: transparent; */
+}
+
+.register body article .warp .layui-btn-container .layui-btn:hover{
+background-color: rgba(193,247,249,0.3) !important;
+/* color: #5fcc9c !important; */
+}
+
+.register body article .warp .layui-container .layui-row div span h1 {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #333f44;
+}
+
+.register body article .warp .layui-container .layui-row .layui-form .layui-form-item {
+    width: 400px;
+    margin-bottom: 30px;
+}
+
+.register body .sign_in .warp .layui-container .layui-row .layui-form .layui-upload{
+    width: 400px;
+}
+
+.register body .sign_in .warp .layui-container .layui-row .layui-form .layui-form-item .layui-input-block .layui-textarea{
+    width: 300px !important;
+}
+
+.register body article .warp .layui-btn-container .layui-btn {
+    width: 200px !important;
+    height: 40px;
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #333f44;
+    border: 2px solid #333f44;
+    background: transparent;
+}
+
+
+.register body article .warp .layui-container .layui-row .layui-form .layui-form-item .layui-input-block .layui-input {
+    max-width: 245px;
+    background: #f1f4f8;
+}
+
+.register body .sign_in .warp .layui-container .layui-row .layui-form .layui-form-item .layui-input-block .layui-unselect {
+    max-width: 245px;
+}
+
+
+
+
+
+/*  */
+.layui-layout .layui-header .layui-nav {
+    text-align: center;
+    padding-left: 0 !important;
+    height: 100%;
+    width: 100%;
+}
+
+.layui-layout .layui-header .layui-nav li h1 {
+    color: #fff;
+    background: #bad7df;
+    width: 100%;
+    line-height: 60px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.layui-layout .layui-header .layui-nav .layui-nav-item {
+    float: right;
+    font-size: 20px;
+}
+
+.layui-layout .layui-side .layui-side-scroll #uls .layui-nav-item a {
+    font-size: 14px;
+    text-align: center;
+}
+
+.layui-layout .layui-side .layui-side-scroll,
+.layui-layout .layui-side .layui-side-scroll #uls {
+    background: #99ddcc;
+}
+
+.layui-layout .layui-side .layui-side-scroll #uls .layui-nav-item:last-of-type {
+    cursor: pointer;
+    background: #216583;
+}
+
+.layui-layout-admin .layui-logo {
+    background: #bad7df !important;
+
+}
+
+.layui-layout-admin .layui-logo a {
+    color: #fff !important;
+    font-size: 24px;
+    font-weight: 700;
+    z-index: 1;
+    position: relative;
+}
+
+
+
+
+/* “公共管理”里的“轮播图” */
+.sign_in .slides .layui-container .layui-row .layui-form .layui-form-item .layui-input-block .layui-input{
+    max-width: 300px;
+}
+
+article .slides .layui-btn-container {
+    text-align: center;
+}
+
+ article .slides .layui-btn-container .layui-btn {
+    width: 200px !important;
+    height: 40px;
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #86bebe;
+    border: 2px solid #86bebe;
+    background: transparent;
+}
+
+article .slides .layui-container .layui-row .layui-form .layui-form-item .layui-form-label {
+    font-size: 20px;
+    font-weight: 700;
+    width: 130px;
+    color: #D35240;
+}
+
+article .warp .layui-container .layui-row .layui-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+article .slides {
+    background: url(../img/index-bg.png) no-repeat;
+    background-size: 100% 100%;
+    overflow-x: hidden;
+    min-height: 100vh;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow-y: clip;
+}
+
+
+.sign_in .slides .layui-container .layui-row .layui-btn-container .layui-btn {
+    width: 200px !important;
+    height: 40px;
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #f7f1c7;
+    border: 2px solid #f7f1c7;
+    background: transparent;
+}
+
+article .slides .layui-container {
+    width: 100%;
+    margin-top: 50px;
+}
+
+article .slides .layui-container {
+    margin-top: 30px;
+}
+
+article .slides .layui-container .layui-row {
+    width: 100%;
+    background: transparent;
+}
+
+article .slides .layui-container .layui-row .layui-form {
+    padding-top: 30px;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.sign_in .slides .layui-container .layui-row .layui-form .layui-form-item .layui-upload div .layui-progress {
+    left: 0px;
+}
+
+.sign_in .slides .layui-container .layui-row .layui-form .layui-form-item .layui-upload span {
+    font-size: 20px;
+    color: #D35240;
+    font-weight: 700;
+    width: 132px !important;
+}
+
+.sign_in .slides .layui-container .layui-row .layui-form .layui-upload .layui-upload-list .layui-upload-img {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #222;
+}
+
+.sign_in .slides .layui-container .layui-row .layui-form .layui-upload {
+    text-align: center;
+    margin-bottom: 50px;
+    width: 600px;
+}
+
+article .slides .layui-container .layui-row .layui-form .layui-form-item {
+    margin-bottom: 50px;
+    width: 600px;
+}
+
+.sign_in .slides .layui-container .layui-row .layui-form .layui-upload div .layui-progress {
+    left: 0px;
+}
+
+
+
+/* “公共管理”里的“公告栏” */
+.sign_in .notice .layui-container .layui-row .layui-form .layui-form-item .layui-input-block .layui-input{
+    max-width: 300px;
+}
+
+article .notice .layui-btn-container {
+    text-align: center;
+}
+
+ article .notice .layui-btn-container .layui-btn {
+    width: 200px !important;
+    height: 40px;
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #86bebe;
+    border: 2px solid #86bebe;
+    background: transparent;
+}
+
+article .notice .layui-container .layui-row .layui-form .layui-form-item .layui-form-label {
+    font-size: 20px;
+    font-weight: 700;
+    width: 130px;
+    color: #D35240;
+}
+
+
+article .notice {
+    background: url(../img/index-bg.png) no-repeat;
+    background-size: 100% 100%;
+    overflow-x: hidden;
+    min-height: 100vh;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow-y: clip;
+}
+
+.sign_in .notice .layui-container .layui-row .layui-btn-container .layui-btn {
+    width: 200px !important;
+    height: 40px;
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #f7f1c7;
+    border: 2px solid #f7f1c7;
+    background: transparent;
+}
+
+article .notice .layui-container {
+    width: 100%;
+    margin-top: 50px;
+}
+
+article .notice .layui-container {
+    margin-top: 30px;
+}
+
+article .notice .layui-container .layui-row {
+    width: 100%;
+    background: transparent;
+}
+
+article .notice .layui-container .layui-row .layui-form {
+    padding-top: 30px;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.sign_in .notice .layui-container .layui-row .layui-form .layui-form-item .layui-upload div .layui-progress {
+    left: 145px;
+}
+
+.sign_in .notice .layui-container .layui-row .layui-form .layui-form-item .layui-upload span {
+    font-size: 20px;
+    color: #D35240;
+    font-weight: 700;
+    width: 132px !important;
+}
+
+.sign_in .notice .layui-container .layui-row .layui-form .layui-upload .layui-upload-list .layui-upload-img {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #222;
+}
+
+.sign_in .notice .layui-container .layui-row .layui-form .layui-upload {
+    text-align: center;
+    margin-bottom: 50px;
+    width: 600px;
+}
+
+article .notice .layui-container .layui-row .layui-form .layui-form-item {
+    margin-bottom: 50px;
+    width: 600px;
+}
+
+.sign_in .notice .layui-container .layui-row .layui-form .layui-upload div .layui-progress {
+    left: 0px;
+}
+
+
+/* “用户管理”里的“管理员” */
+.sign_in .user .layui-container .layui-row .layui-form .layui-form-item .layui-input-block .layui-input{
+    max-width: 300px;
+}
+
+article .user .layui-btn-container {
+    text-align: center;
+}
+
+ article .user .layui-btn-container .layui-btn {
+    width: 200px !important;
+    height: 40px;
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #86bebe;
+    border: 2px solid #86bebe;
+    background: transparent;
+}
+
+article .user .layui-container .layui-row .layui-form .layui-form-item .layui-form-label {
+    font-size: 20px;
+    font-weight: 700;
+    width: 130px;
+    color: #D35240;
+}
+
+
+article .user {
+    background: url(../img/index-bg.png) no-repeat;
+    background-size: 100% 100%;
+    overflow-x: hidden;
+    min-height: 100vh;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow-y: clip;
+}
+
+.sign_in .user .layui-container .layui-row .layui-btn-container .layui-btn {
+    width: 200px !important;
+    height: 40px;
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #f7f1c7;
+    border: 2px solid #f7f1c7;
+    background: transparent;
+}
+
+article .user .layui-container {
+    width: 100%;
+    margin-top: 50px;
+}
+
+article .user .layui-container {
+    margin-top: 30px;
+}
+
+article .user .layui-container .layui-row {
+    width: 100%;
+    background: transparent;
+}
+
+article .user .layui-container .layui-row .layui-form {
+    padding-top: 30px;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.sign_in .user .layui-container .layui-row .layui-form .layui-form-item .layui-upload div .layui-progress {
+    left: 145px;
+}
+
+.sign_in .user .layui-container .layui-row .layui-form .layui-form-item .layui-upload span {
+    font-size: 20px;
+    color: #D35240;
+    font-weight: 700;
+    width: 132px !important;
+}
+
+.sign_in .user .layui-container .layui-row .layui-form .layui-upload .layui-upload-list .layui-upload-img {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #222;
+}
+
+.sign_in .user .layui-container .layui-row .layui-form .layui-upload {
+    text-align: center;
+    margin-bottom: 50px;
+    width: 600px;
+}
+
+article .user .layui-container .layui-row .layui-form .layui-form-item {
+    margin-bottom: 50px;
+    width: 600px;
+}
+
+.sign_in .user .layui-container .layui-row .layui-form .layui-upload div .layui-progress {
+    left: 0px;
+}
+
+
+
+/* “信息管理”里的“论坛” */
+.sign_in .forum .layui-container .layui-row .layui-form .layui-form-item .layui-input-block .layui-input{
+    max-width: 300px;
+}
+
+article .forum .layui-btn-container {
+    text-align: center;
+}
+
+ article .forum .layui-btn-container .layui-btn {
+    width: 200px !important;
+    height: 40px;
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #86bebe;
+    border: 2px solid #86bebe;
+    background: transparent;
+}
+
+article .forum .layui-container .layui-row .layui-form .layui-form-item .layui-form-label {
+    font-size: 20px;
+    font-weight: 700;
+    width: 130px;
+    color: #D35240;
+}
+
+
+article .forum {
+    background: url(../img/index-bg.png) no-repeat;
+    background-size: 100% 100%;
+    overflow-x: hidden;
+    min-height: 100vh;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow-y: clip;
+}
+
+
+.sign_in .forum .layui-container .layui-row .layui-btn-container .layui-btn {
+    width: 200px !important;
+    height: 40px;
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #f7f1c7;
+    border: 2px solid #f7f1c7;
+    background: transparent;
+}
+
+article .forum .layui-container {
+    width: 100%;
+    margin-top: 50px;
+}
+
+article .forum .layui-container {
+    margin-top: 30px;
+}
+
+article .forum .layui-container .layui-row {
+    width: 100%;
+    background: transparent;
+}
+
+article .forum .layui-container .layui-row .layui-form {
+    padding-top: 30px;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.sign_in .forum .layui-container .layui-row .layui-form .layui-form-item .layui-upload div .layui-progress {
+    left: 145px;
+}
+
+.sign_in .forum .layui-container .layui-row .layui-form .layui-form-item .layui-upload span {
+    font-size: 20px;
+    color: #D35240;
+    font-weight: 700;
+    width: 132px !important;
+}
+
+.sign_in .forum .layui-container .layui-row .layui-form .layui-upload .layui-upload-list .layui-upload-img {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #222;
+}
+
+.sign_in .forum .layui-container .layui-row .layui-form .layui-upload {
+    text-align: center;
+    margin-bottom: 50px;
+    width: 600px;
+}
+
+article .forum .layui-container .layui-row .layui-form .layui-form-item {
+    margin-bottom: 50px;
+    width: 600px;
+}
+
+.sign_in .forum .layui-container .layui-row .layui-form .layui-upload div .layui-progress {
+    left: 0px;
+}
+
+
+
+
+/* “信息管理”里的“论坛分类” */
+.sign_in .forum_type .layui-container .layui-row .layui-form .layui-form-item .layui-input-block .layui-input{
+    max-width: 300px;
+}
+
+article .forum_type .layui-btn-container {
+    text-align: center;
+}
+
+ article .forum_type .layui-btn-container .layui-btn {
+    width: 200px !important;
+    height: 40px;
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #86bebe;
+    border: 2px solid #86bebe;
+    background: transparent;
+}
+
+article .forum_type .layui-container .layui-row .layui-form .layui-form-item .layui-form-label {
+    font-size: 20px;
+    font-weight: 700;
+    width: 130px;
+    color: #D35240;
+}
+
+
+
+article .forum_type {
+    background: url(../img/index-bg.png) no-repeat;
+    background-size: 100% 100%;
+    overflow-x: hidden;
+    min-height: 100vh;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow-y: clip;
+}
+
+
+.sign_in .forum_type .layui-container .layui-row .layui-btn-container .layui-btn {
+    width: 200px !important;
+    height: 40px;
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #f7f1c7;
+    border: 2px solid #f7f1c7;
+    background: transparent;
+}
+
+article .forum_type .layui-container {
+    width: 100%;
+    margin-top: 50px;
+}
+
+article .forum_type .layui-container {
+    margin-top: 30px;
+}
+
+article .forum_type .layui-container .layui-row {
+    width: 100%;
+    background: transparent;
+}
+
+article .forum_type .layui-container .layui-row .layui-form {
+    padding-top: 30px;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.sign_in .forum_type .layui-container .layui-row .layui-form .layui-form-item .layui-upload div .layui-progress {
+    left: 145px;
+}
+
+.sign_in .forum_type .layui-container .layui-row .layui-form .layui-form-item .layui-upload span {
+    font-size: 20px;
+    color: #D35240;
+    font-weight: 700;
+    width: 132px !important;
+}
+
+.sign_in .forum_type .layui-container .layui-row .layui-form .layui-upload .layui-upload-list .layui-upload-img {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #222;
+}
+
+.sign_in .forum_type .layui-container .layui-row .layui-form .layui-upload {
+    text-align: center;
+    margin-bottom: 50px;
+    width: 600px;
+}
+
+article .forum_type .layui-container .layui-row .layui-form .layui-form-item {
+    margin-bottom: 50px;
+    width: 600px;
+}
+
+.sign_in .forum_type .layui-container .layui-row .layui-form .layui-upload div .layui-progress {
+    left: 0px;
+}
+
+
+
+
+/* “信息管理”里的“测试新闻” */
+.sign_in .article .layui-container .layui-row .layui-form .layui-form-item .layui-input-block .layui-input{
+    max-width: 300px;
+}
+
+article .article .layui-btn-container {
+    text-align: center;
+}
+
+ article .article .layui-btn-container .layui-btn {
+    width: 200px !important;
+    height: 40px;
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #86bebe;
+    border: 2px solid #86bebe;
+    background: transparent;
+}
+
+article .article .layui-container .layui-row .layui-form .layui-form-item .layui-form-label {
+    font-size: 20px;
+    font-weight: 700;
+    width: 130px;
+    color: #D35240;
+}
+
+
+article .article {
+    background: url(../img/index-bg.png) no-repeat;
+    background-size: 100% 100%;
+    overflow-x: hidden;
+    min-height: 100vh;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow-y: clip;
+}
+
+.sign_in .article .layui-container .layui-row .layui-btn-container .layui-btn {
+    width: 200px !important;
+    height: 40px;
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #f7f1c7;
+    border: 2px solid #f7f1c7;
+    background: transparent;
+}
+
+article .article .layui-container {
+    width: 100%;
+    margin-top: 50px;
+}
+
+article .article .layui-container {
+    margin-top: 30px;
+}
+
+article .article .layui-container .layui-row {
+    width: 100%;
+    background: transparent;
+}
+
+article .article .layui-container .layui-row .layui-form {
+    padding-top: 30px;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.sign_in .article .layui-container .layui-row .layui-form .layui-form-item .layui-upload div .layui-progress {
+    left: 145px;
+}
+
+.sign_in .article .layui-container .layui-row .layui-form .layui-form-item .layui-upload span {
+    font-size: 20px;
+    color: #D35240;
+    font-weight: 700;
+    width: 132px !important;
+}
+
+.sign_in .article .layui-container .layui-row .layui-form .layui-upload .layui-upload-list .layui-upload-img {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #222;
+}
+
+.sign_in .article .layui-container .layui-row .layui-form .layui-upload {
+    text-align: center;
+    margin-bottom: 50px;
+    width: 600px;
+}
+
+article .article .layui-container .layui-row .layui-form .layui-form-item {
+    margin-bottom: 50px;
+    width: 600px;
+}
+
+.sign_in .article .layui-container .layui-row .layui-form .layui-upload div .layui-progress {
+    left: 0px;
+}
+
+
+
+
+/* “信息管理”里的“资讯分类” */
+.sign_in .article_type .layui-container .layui-row .layui-form .layui-form-item .layui-input-block .layui-input{
+    max-width: 300px;
+}
+
+article .article_type .layui-btn-container {
+    text-align: center;
+}
+
+ article .article_type .layui-btn-container .layui-btn {
+    width: 200px !important;
+    height: 40px;
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #86bebe;
+    border: 2px solid #86bebe;
+    background: transparent;
+}
+
+article .article_type .layui-container .layui-row .layui-form .layui-form-item .layui-form-label {
+    font-size: 20px;
+    font-weight: 700;
+    width: 130px;
+    color: #D35240;
+}
+
+
+
+article .article_type {
+    background: url(../img/index-bg.png) no-repeat;
+    background-size: 100% 100%;
+    overflow-x: hidden;
+    min-height: 100vh;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow-y: clip;
+}
+
+.sign_in .article_type .layui-container .layui-row .layui-btn-container .layui-btn {
+    width: 200px !important;
+    height: 40px;
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #f7f1c7;
+    border: 2px solid #f7f1c7;
+    background: transparent;
+}
+
+article .article_type .layui-container {
+    width: 100%;
+    margin-top: 50px;
+}
+
+article .article_type .layui-container {
+    margin-top: 30px;
+}
+
+article .article_type .layui-container .layui-row {
+    width: 100%;
+    background: transparent;
+}
+
+article .article_type .layui-container .layui-row .layui-form {
+    padding-top: 30px;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.sign_in .article_type .layui-container .layui-row .layui-form .layui-form-item .layui-upload div .layui-progress {
+    left: 145px;
+}
+
+.sign_in .article_type.layui-container .layui-row .layui-form .layui-form-item .layui-upload span {
+    font-size: 20px;
+    color: #D35240;
+    font-weight: 700;
+    width: 132px !important;
+}
+
+.sign_in .article_type .layui-container .layui-row .layui-form .layui-upload .layui-upload-list .layui-upload-img {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #222;
+}
+
+.sign_in .article_type .layui-container .layui-row .layui-form .layui-upload {
+    text-align: center;
+    margin-bottom: 50px;
+    width: 600px;
+}
+
+article .article_type .layui-container .layui-row .layui-form .layui-form-item {
+    margin-bottom: 50px;
+    width: 600px;
+}
+
+.sign_in .article_type .layui-container .layui-row .layui-form .layui-upload div .layui-progress {
+    left: 0px;
+}
+
+
+
+/* “信息管理”里的“商城测试” */
+.sign_in .exam .layui-container .layui-row .layui-form .layui-form-item .layui-input-block .layui-input{
+    max-width: 300px;
+}
+
+article .exam .layui-btn-container {
+    text-align: center;
+}
+
+ article .exam .layui-btn-container .layui-btn {
+    width: 200px !important;
+    height: 40px;
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #86bebe;
+    border: 2px solid #86bebe;
+    background: transparent;
+}
+
+article .exam .layui-container .layui-row .layui-form .layui-form-item .layui-form-label {
+    font-size: 20px;
+    font-weight: 700;
+    width: 130px;
+    color: #D35240;
+}
+
+
+
+
+article .exam {
+    background: url(../img/index-bg.png) no-repeat;
+    background-size: 100% 100%;
+    overflow-x: hidden;
+    min-height: 100vh;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow-y: clip;
+}
+
+.sign_in .exam .layui-container .layui-row .layui-btn-container .layui-btn {
+    width: 200px !important;
+    height: 40px;
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #f7f1c7;
+    border: 2px solid #f7f1c7;
+    background: transparent;
+}
+
+article .exam .layui-container {
+    width: 100%;
+    margin-top: 50px;
+}
+
+article .exam .layui-container {
+    margin-top: 30px;
+}
+
+article .exam .layui-container .layui-row {
+    width: 100%;
+    background: transparent;
+}
+
+article .exam .layui-container .layui-row .layui-form {
+    padding-top: 30px;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.sign_in .exam .layui-container .layui-row .layui-form .layui-form-item .layui-upload div .layui-progress {
+    left: 145px;
+}
+
+.sign_in .article_type.layui-container .layui-row .layui-form .layui-form-item .layui-upload span {
+    font-size: 20px;
+    color: #D35240;
+    font-weight: 700;
+    width: 132px !important;
+}
+
+.sign_in .exam .layui-container .layui-row .layui-form .layui-upload .layui-upload-list .layui-upload-img {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #222;
+}
+
+.sign_in .exam .layui-container .layui-row .layui-form .layui-upload {
+    text-align: center;
+    margin-bottom: 50px;
+    width: 600px;
+}
+
+article .exam .layui-container .layui-row .layui-form .layui-form-item {
+    margin-bottom: 50px;
+    width: 600px;
+}
+
+.sign_in .exam .layui-container .layui-row .layui-form .layui-upload div .layui-progress {
+    left: 0px;
+}
+
+
+/* “分类列表” */
+.sign_in .goods_type .layui-container .layui-row .layui-form .layui-form-item .layui-input-block .layui-input{
+    max-width: 300px;
+}
+
+article .goods_type .layui-btn-container {
+    text-align: center;
+}
+
+ article .goods_type .layui-btn-container .layui-btn {
+    width: 200px !important;
+    height: 40px;
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #86bebe;
+    border: 2px solid #86bebe;
+    background: transparent;
+}
+
+article .goods_type.layui-container .layui-row .layui-form .layui-form-item .layui-form-label {
+    font-size: 20px;
+    font-weight: 700;
+    width: 130px;
+    color: #D35240;
+}
+
+
+
+article .goods_type {
+    background: url(../img/index-bg.png) no-repeat;
+    background-size: 100% 100%;
+    overflow-x: hidden;
+    min-height: 100vh;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow-y: clip;
+}
+
+.sign_in .goods_type .layui-container .layui-row .layui-btn-container .layui-btn {
+    width: 200px !important;
+    height: 40px;
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #f7f1c7;
+    border: 2px solid #f7f1c7;
+    background: transparent;
+}
+
+article .goods_type .layui-container {
+    width: 100%;
+    margin-top: 50px;
+}
+
+article .goods_type .layui-container {
+    margin-top: 30px;
+}
+
+article .goods_type .layui-container .layui-row {
+    width: 100%;
+    background: transparent;
+}
+
+article .goods_type .layui-container .layui-row .layui-form {
+    padding-top: 30px;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.sign_in .goods_type .layui-container .layui-row .layui-form .layui-form-item .layui-upload div .layui-progress {
+    left: 145px;
+}
+
+.sign_in .article_type.layui-container .layui-row .layui-form .layui-form-item .layui-upload span {
+    font-size: 20px;
+    color: #D35240;
+    font-weight: 700;
+    width: 132px !important;
+}
+
+.sign_in .goods_type .layui-container .layui-row .layui-form .layui-upload .layui-upload-list .layui-upload-img {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #222;
+}
+
+.sign_in .goods_type .layui-container .layui-row .layui-form .layui-upload {
+    text-align: center;
+    margin-bottom: 50px;
+    width: 600px;
+}
+
+article .goods_type .layui-container .layui-row .layui-form .layui-form-item {
+    margin-bottom: 50px;
+    width: 600px;
+}
+
+.sign_in .goods_type .layui-container .layui-row .layui-form .layui-upload div .layui-progress {
+    left: 0px;
+}
+
+
+
+/* 通用 */
+.sign_in .warp .layui-container .layui-row .layui-form .layui-form-item .layui-input-block .layui-input{
+    max-width: 300px;
+    border-radius: 5px;
+    background-color: rgba(245,244,240, 0.6);
+    border: 1px #dff4f3 solid;
+}
+
+article .warp .layui-btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ article .warp .layui-btn-container .layui-btn {
+    width: 200px !important;
+    height: 40px;
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #86bebe;
+    border: 2px solid #86bebe;
+    background: transparent;
+}
+
+article .warp .layui-container .layui-row .layui-form .layui-form-item .layui-form-label {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    width: 130px;
+    color: #878ecd;
+}
+
+article .warp .layui-container .layui-row div span h1{
+    text-align: center;
+    color: #878ecd;
+    line-height: 60px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+article .warp {
+    background: url(../img/8.png) no-repeat;
+    background-size: 100% 100%;
+    overflow-x: hidden;
+    min-height: 100vh;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow-y: clip;
+}
+.sign_in .warp .layui-container .layui-row .layui-btn-container {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center;
+}
+
+.sign_in .warp .layui-container .layui-row .layui-btn-container .layui-btn {
+    width: 200px !important;
+    height: 50px;
+    line-height: 45px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #878ecd;
+    border: 2px solid #878ecd;
+    border-radius: 10px;
+    background: transparent;
+    margin-right: 50px;
+}
+.sign_in .warp .layui-container .layui-row .layui-btn-container .layui-btn:hover{
+    background-color: rgb(255, 255, 255);
+}
+article .warp .layui-container {
+    width: 100%;
+    margin-top: 50px;
+}
+
+article .warp .layui-container {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+article .warp .layui-container .layui-row {
+    width: 100%;
+    background: transparent;
+}
+
+article .warp .layui-container .layui-row .layui-form {
+    padding-top: 30px;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.sign_in .warp .layui-container .layui-row .layui-form .layui-form-item .layui-upload div .layui-progress {
+    left: 0px;
+}
+
+.sign_in .warp .layui-container .layui-row .layui-form .layui-form-item .layui-upload span {
+    font-size: 20px;
+    color: #878ecd;
+    font-weight: 700;
+    width: 132px !important;
+}
+
+.sign_in .warp .layui-container .layui-row .layui-form .layui-upload .layui-btn{
+    background-color: #99ddcc;
+}
+
+.sign_in .warp .layui-container .layui-row .layui-form .layui-upload .layui-upload-list .layui-upload-img {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #222;
+}
+
+.sign_in .warp .layui-container .layui-row .layui-form .layui-upload {
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    width: 600px;
+}
+
+article .warp .layui-container .layui-row .layui-form .layui-form-item {
+    /* text-align: center; */
+    margin-bottom: 50px;
+    width: 600px;
+}
+
+article .warp .layui-container .layui-row .layui-form .layui-form-item span{
+    justify-content: center;
+    line-height: 36px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #c79ecf;
+}
+
+.sign_in .warp .layui-container .layui-row .layui-form .layui-upload div .layui-progress {
+    left: 0px;
+}
+
+.section1 .table .layui-form .layui-table-page #layui-table-page1{
+    text-align: center;
+}
+
+.section1 .table .layui-form .layui-table-page #layui-table-page1 span.layui-laypage-curr em{
+    background-color:#99ddcc !important ;
+}
+
+.section1 .table .layui-form .layui-table-box .layui-table-body .layui-table tbody tr td .layui-table-cell{
+    height: 100px !important;
+    line-height: 100px !important;
+}
+
+.section1 .table .layui-form .layui-table-box .layui-table-body .layui-table tbody tr td .layui-table-cell
+.layui-btn{
+    background-color: #99ddcc;
+}
+
+.layui-btn-container{
+    text-align: center;
+}
+
+.box{
+	margin-left: 9.375rem !important;
+}
+
+#i{
+	display: none !important;
+}
+.exam{
+	padding: 65px !important;
+}
