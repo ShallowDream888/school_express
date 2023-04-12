@@ -184,7 +184,7 @@
                     width: '10%',
                     title: '封面图',
                     templet: function (d) {
-                        return "<div><img src=" + fullUrl(BaseUrl, d.img) + "></div>"
+                        return "<div><img src=" + fullUrl(BaseUrl,d.img) + "></div>"
                     }
                 }
                 , {field: 'type', width: '10%', title: '文章分类', sort: true}

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-         pageEncoding="utf-8" %>
+pageEncoding="utf-8" %>
 <%
-    String path = request.getContextPath();
+String path = request.getContextPath();
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en" class="login">
@@ -15,81 +15,81 @@
     <script src="./js/axios.min.js"></script>
 </head>
 <style>
-    * {
-        moz-user-select: -moz-none;
-        -moz-user-select: none;
-        -o-user-select: none;
-        -khtml-user-select: none;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
+                * {
+            moz-user-select: -moz-none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
 
-    body {
-        background: #34495e;
-    }
+        body {
+            background: #34495e;
+        }
 
-    .wrap {
-        width: 600px;
-        margin: 100px auto;
-    }
+        .wrap {
+            width: 600px;
+            margin: 100px auto;
+        }
 
-    .banner {
-        width: 600px;
-        height: 400px;
-        background: url(./img/5.png);
-        background-size: 600px 400px;
-        position: relative;
-    }
+        .banner {
+            width: 600px;
+            height: 400px;
+            background: url(./img/5.png);
+            background-size: 600px 400px;
+            position: relative;
+        }
 
-    .blank-box {
-        position: absolute;
-        top: 100px;
-        left: 200px;
-        width: 50px;
-        height: 50px;
-        background: #fff;
-    }
+        .blank-box {
+            position: absolute;
+            top: 100px;
+            left: 200px;
+            width: 50px;
+            height: 50px;
+            background: #fff;
+        }
 
-    .block {
-        position: absolute;
-        top: 100px;
-        left: 0;
-        width: 50px;
-        height: 50px;
-        background: url(./img/4.png);
-        background-size: 600px 400px;
-        background-position: -200px -100px;
-        border: 1px solid red;
-    }
+        .block {
+            position: absolute;
+            top: 100px;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            background: url(./img/4.png);
+            background-size: 600px 400px;
+            background-position: -200px -100px;
+            border: 1px solid red;
+        }
 
-    .move {
-        position: relative;
-    }
+        .move {
+            position: relative;
+        }
 
-    .move p {
-        height: 50px;
-        line-height: 50px;
-        font-size: 16px;
-        color: #666;
-        background: #eee;
-        text-align: center;
-    }
+        .move p {
+            height: 50px;
+            line-height: 50px;
+            font-size: 16px;
+            color: #666;
+            background: #eee;
+            text-align: center;
+        }
 
-    .move-block {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 50px;
-        height: 50px;
-        background: #1abc9c;
-        cursor: pointer;
-    }
-</style>
+        .move-block {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50px;
+            height: 50px;
+            background: #1abc9c;
+            cursor: pointer;
+        }
+        </style>
 
 <body>
 <article class="">
-    <div class="warp">
+        <div class="warp">
         <div class="layui-container">
             <div class="layui-row">
                 <div>
@@ -114,22 +114,22 @@
                                    id="password">
                         </div>
                     </div>
-                    <!-- 极验开始 -->
-                    <div class="wrap">
-                        <div class="banner">
-                            <div class="blank-box"></div>
-                            <div class="block"></div>
+                                            <!-- 极验开始 -->
+                        <div class="wrap">
+                            <div class="banner">
+                                <div class="blank-box"></div>
+                                <div class="block"></div>
+                            </div>
+                            <div class="move">
+                                <p>移动滑块>>></p>
+                                <div class="move-block"></div>
+                            </div>
                         </div>
-                        <div class="move">
-                            <p>移动滑块>>></p>
-                            <div class="move-block"></div>
-                        </div>
-                    </div>
-                    <!-- 极验结束 -->
-                </form>
+                        <!-- 极验结束 -->
+                                                                            </form>
                 <div class="layui-btn-container">
                     <a type="button" class="layui-btn layui-btn-normal" id="login">登录/Login</a>
-                    <a href="./page/forgot.jsp" type="button" class="layui-btn layui-btn-normal">密码找回/Retrieve
+                                        <a href="./page/forgot.jsp" type="button" class="layui-btn layui-btn-normal">密码找回/Retrieve
                         password</a>
                 </div>
             </div>
@@ -138,14 +138,14 @@
 </article>
 </body>
 <script src="./layui/layui.js" charset="utf-8"></script>
-<script src="./js/login.js"></script>
-<script src="./js/base.js"></script>
-<script>
+        <script src="./js/login.js"></script>
+    <script src="./js/base.js"></script>
+        <script>
     var BaseUrl = baseUrl()
     let btn = document.getElementById("login");
     let account = document.getElementById("account");
     let password = document.getElementById("password");
-
+    
     var tokenReg = new RegExp('(^|&)' + "token" + '=([^&]*)(&|$)', 'i');
 
     var tokenValue = window.location.search.substr(1).match(tokenReg);
@@ -155,21 +155,21 @@
         tokenLogin(token);
     }
 
-    async function tokenLogin(token) {
-        const {data: res} = await axios.get(BaseUrl + '/api/user/state', {
+    async function tokenLogin(token){
+        const {data: res} = await axios.get(BaseUrl + '/api/user/state',{
             headers: {
                 "x-auth-token": token
             }
         })
-        if (res && res.result && res.result.obj) {
+        if (res && res.result && res.result.obj){
             let obj = JSON.stringify(res.result.obj)
             sessionStorage.setItem('personInfo', [obj])
             sessionStorage.setItem('token', res.result.obj.token)
             window.location.replace("./page/frime.jsp")
-        } else {
-            if (sessionStorage.personInfo) {
+        }else{
+            if (sessionStorage.personInfo){
                 let personInfo = JSON.parse(sessionStorage.personInfo)
-                if (personInfo) {
+                if(personInfo){
                     window.location.replace("./page/frime.jsp");
                 }
             }
@@ -183,13 +183,15 @@
             layer.msg('请输入账号');
         } else if (password.value === '') {
             layer.msg('请输入密码');
-        } else if (!k) {
-            layer.msg('请滑动验证');
-        } else {
+        }
+                        else if (!k) {
+                layer.msg('请滑动验证');
+            }
+                                            else {
             const {data: res} = await axios.post(BaseUrl + '/api/user/login?', {
                 "username": account.value,
                 "password": password.value
-            }, {
+            },{
                 headers: {
                     "Content-Type": "application/json"
                 }
@@ -214,7 +216,7 @@
             const {data: res} = await axios.post(BaseUrl + '/api/user/login?', {
                 "username": account.value,
                 "password": password.value
-            }, {
+            },{
                 headers: {
                     "Content-Type": "application/json"
                 }
@@ -237,7 +239,7 @@
     document.addEventListener("keydown", keyboard);
 
     // 注册/Register
-
+        
     // 弹出层
     layui.use('layer', function () {
         var layer = layui.layer;

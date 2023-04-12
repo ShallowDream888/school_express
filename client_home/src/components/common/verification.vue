@@ -1,28 +1,28 @@
 <template>
   <div style="display:flex;">
-    <el-input v-model="val" placeholder="不区分大小写" style=" color: black; font-size:15px; margin-right: 30px; margin-left: -15px;" type="text"
-              value=""/>
-    <canvas id="canvas" height="43" style="border: 1px solid #ccc;
-              border-radius: 5px; background-color: aliceblue;" width="100" @click="dj"></canvas>
+    <el-input type="text" value="" v-model="val" placeholder="不区分大小写"
+    style=" color: black; font-size:15px; margin-right: 30px; margin-left: -15px;" />
+              <canvas id="canvas" width="100" height="43"  @click="dj" style="border: 1px solid #ccc;
+              border-radius: 5px; background-color: aliceblue;"></canvas>
   </div>
 </template>
 <script>
-export default {
-  name: 'verification',
-  mounted() {
-    this.draw(this.show_num);
-    this.$emit('sublim')
-  },
-  data() {
-    return {
-      val: '',
-      num: '',
-      show_num: []
-    }
-  },
-  methods: {
-    sublim() {
-      this.num = this.show_num.join("");
+   export default {
+     name:'verification',
+     mounted(){
+      this.draw(this.show_num);
+      this.$emit('sublim')
+     },
+     data(){
+       return{
+         val:'',
+         num:'',
+         show_num:[]
+       }
+     },
+     methods:{
+      sublim() {
+        this.num = this.show_num.join("");
       if (this.val == '') {
         this.$message.warning("请输入验证码");
         return false
@@ -34,13 +34,13 @@ export default {
         this.$message.error("校验失败");
         return false
       }
-    },
-    dj() {
-      console.log(1)
+     },
+     dj(){
+       console.log(1)
       this.draw(this.show_num);
-    },
+     },
 
-    draw(show_num) {
+     draw(show_num) {
       var canvas_width = document.getElementById('canvas').clientWidth;
       var canvas_height = document.getElementById('canvas').clientHeight;
       var canvas = document.getElementById("canvas");//获取到canvas的对象，演员
@@ -93,7 +93,7 @@ export default {
       var g = Math.floor(Math.random() * 256);
       var b = Math.floor(Math.random() * 256);
       return "rgb(" + r + "," + g + "," + b + ")";
+      }
     }
   }
-}
 </script>

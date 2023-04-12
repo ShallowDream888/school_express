@@ -49,8 +49,10 @@
 </div>
 <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
 
-
-<script src="../js/base.js"></script>
+                                                    
+    
+    
+    <script src="../js/base.js"></script>
 <script type="text/javascript">
     var BaseUrl = baseUrl()
     let personInfo = JSON.parse(sessionStorage.personInfo)
@@ -66,43 +68,43 @@
         permissions = ren.result.list
 
 
-        function $get_power(path) {
-            var list = permissions;
-            var obj;
-            for (var i = 0; i < list.length; i++) {
-                var o = list[i];
-                if (o.path === path) {
-                    obj = o;
-                    break;
-                }
+    function $get_power(path) {
+        var list = permissions;
+        var obj;
+        for (var i = 0; i < list.length; i++) {
+            var o = list[i];
+            if (o.path === path) {
+                obj = o;
+                break;
             }
-            return obj;
         }
-
-        /**
-         * 是否有统计字段的权限
-         */
-        function $check_figure(path) {
-            var o = $get_power(path);
-            if (o) {
-                var option = JSON.parse(o.option);
-                if (option.figure)
-                    return true
-            }
-            return false;
-        }
-
-        function $check_comment(path) {
-            var o = this.$get_power(path);
-            if (o) {
-                var option = JSON.parse(o.option);
-                if (option.can_show_comment)
-                    return true
-            }
-            return false;
-        }
-
+        return obj;
     }
+
+    /**
+     * 是否有统计字段的权限
+     */
+    function $check_figure(path) {
+        var o = $get_power(path);
+        if (o) {
+            var option = JSON.parse(o.option);
+            if (option.figure)
+                return true
+        }
+        return false;
+    }
+
+    function $check_comment(path) {
+        var o = this.$get_power(path);
+        if (o) {
+            var option = JSON.parse(o.option);
+            if (option.can_show_comment)
+                return true
+        }
+        return false;
+    }
+
+                            }
 
     get_list()
 
@@ -114,7 +116,7 @@
         let user_group = personInfo.user_group
         let user_id = personInfo.user_id
 
-
+                                        
         let {data: res} = await axios.get(url)
 
         let arr = []
@@ -159,6 +161,7 @@
         myChart.setOption(option);
     }
 
+                        
 
     let ii = document.querySelector('#i')
     let i

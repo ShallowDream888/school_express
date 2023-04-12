@@ -1,209 +1,197 @@
 <template>
-  <div class="diy_details_box diy_div_runner">
-    <div class="warp">
-      <div class="container">
-        <div class="details_title">详情</div>
-        <div class="row">
-          <div class="row_top_wrap">
-            <!-- 图片 -->
-            <div v-if="imgList.length" class="row_1">
-              <div v-for="(item,index) in imgList" :key="item+index" class="diy_img">
-                <img :src="$fullUrl(obj[item.name])"/>
-              </div>
-            </div>
-            <!-- 内容 -->
-            <div :class="{flex_row2: !imgList.length}" class="row_2">
-              <div v-for="(item,index) in itemList" v-show="$check_field('get',item.name)" :key="item+index"
-                   :class="{flex_row2_item: !imgList.length}">
-                <div class="view">
-                  <div class="diy_title">
-                    <span>{{ item.title }}:</span>
-                  </div>
+	<div class="diy_details_box diy_div_runner">
+		<div class="warp">
+			<div class="container">
+					<div class="details_title">详情</div>
+				<div class="row">
+						<div class="row_top_wrap">
+						<!-- 图片 -->
+							<div class="row_1" v-if="imgList.length">
+									<div class="diy_img" v-for="(item,index) in imgList" :key="item+index">
+									<img :src="$fullUrl(obj[item.name])" />
+								</div>
+							</div>
+							<!-- 内容 -->
+							<div class="row_2" :class="{flex_row2: !imgList.length}">
+								<div :class="{flex_row2_item: !imgList.length}" v-for="(item,index) in itemList" :key="item+index" v-show="$check_field('get',item.name)">
+							<div class="view">
+								<div class="diy_title">
+									<span>{{item.title}}:</span>
+								</div>
 
-                  <div v-if="item.type == 'UID'" :class="{flex_row2_item_text:imgList.length}"
-                       class="diy_field diy_uid">
+								<div class="diy_field diy_uid" :class="{flex_row2_item_text:imgList.length}" v-if="item.type == 'UID'">
 									<span>
-										{{ get_user_info(item.name, obj[item.name]) }}
+										{{ get_user_info(item.name,obj[item.name]) }}
 									</span>
-                  </div>
-                  <div v-else-if="item.type == '视频'" :class="{flex_row2_item_text:imgList.length}"
-                       class="diy_field diy_video">
-                    <router-link v-if="obj[item.name]" :to="'/media/video?filename=' + $fullUrl(obj[item.name])">
+								</div>
+								<div class="diy_field diy_video" :class="{flex_row2_item_text:imgList.length}" v-else-if="item.type == '视频'">
+									<router-link :to="'/media/video?filename=' + $fullUrl(obj[item.name])" v-if="obj[item.name]" >
 										<span>
 											查看视频
 										</span>
-                    </router-link>
-                  </div>
-                  <div v-else-if="item.type == '音频'" :class="{flex_row2_item_text:imgList.length}"
-                       class="diy_field diy_music">
-                    <audio v-if="obj[item.name]" :src="$fullUrl(obj[item.name])" controls
-                           style="text-align: left"></audio>
-                  </div>
-                  <div v-else-if="item.type == '文件'" :class="{flex_row2_item_text:imgList.length}"
-                       class="diy_field diy_music">
-                    <a :href="$fullUrl(obj[item.name])" style="color: rgb(64, 158, 255);" target="_blank">点击下载</a>
-                  </div>
-                  <div v-else-if="item.type == '日期'" :class="{flex_row2_item_text:imgList.length}"
-                       class="diy_field diy_date">
+									</router-link>
+								</div>
+								<div class="diy_field diy_music" :class="{flex_row2_item_text:imgList.length}" v-else-if="item.type == '音频'">
+									<audio v-if="obj[item.name]" style="text-align: left" :src="$fullUrl(obj[item.name])" controls></audio>
+								</div>
+								<div class="diy_field diy_music" :class="{flex_row2_item_text:imgList.length}" v-else-if="item.type == '文件'">
+									<a :href="$fullUrl(obj[item.name])" target="_blank" style="color: rgb(64, 158, 255);">点击下载</a>
+								</div>
+								<div class="diy_field diy_date" :class="{flex_row2_item_text:imgList.length}" v-else-if="item.type == '日期'">
 									<span>
-										{{ $toTime(obj[item.name], "yyyy-MM-dd") }}
+										{{ $toTime(obj[item.name] ,"yyyy-MM-dd") }}
 									</span>
-                  </div>
-                  <div v-else-if="item.type == '时间'" :class="{flex_row2_item_text:imgList.length}"
-                       class="diy_field diy_time">
+								</div>
+								<div class="diy_field diy_time" :class="{flex_row2_item_text:imgList.length}" v-else-if="item.type == '时间'">
 									<span>
-										{{ $toTime(obj[item.name], "hh:mm:ss") }}
+										{{ $toTime(obj[item.name] ,"hh:mm:ss") }}
 									</span>
-                  </div>
-                  <div v-else-if="item.type == '日长'" :class="{flex_row2_item_text:imgList.length}"
-                       class="diy_field diy_datetime">
+								</div>
+								<div class="diy_field diy_datetime" :class="{flex_row2_item_text:imgList.length}" v-else-if="item.type == '日长'">
 									<span>
-										{{ $toTime(obj[item.name], "yyyy-MM-dd hh:mm:ss") }}
+										{{ $toTime(obj[item.name] ,"yyyy-MM-dd hh:mm:ss") }}
 									</span>
-                  </div>
-                  <div v-else-if="item.type == '电话' || item.type == '手机'" :class="{flex_row2_item_text:imgList.length}"
-                       class="diy_field diy_phone">
+								</div>
+								<div class="diy_field diy_phone" :class="{flex_row2_item_text:imgList.length}"  v-else-if="item.type == '电话' || item.type == '手机'">
 									<span>
 										{{ obj[item.name] }}
 									</span>
-                  </div>
-                  <div v-else-if="item.type == '数字'" :class="{flex_row2_item_text:imgList.length}"
-                       class="diy_field diy_number">
+								</div>
+								<div class="diy_field diy_number" :class="{flex_row2_item_text:imgList.length}" v-else-if="item.type == '数字'">
 									<span>
 										{{ obj[item.name] }}
 									</span>
-                  </div>
-                  <div v-else-if="item.type == '网址'" :class="{flex_row2_item_text:imgList.length}"
-                       class="diy_field diy_url">
-                    <div>
-                      <a :href="obj[item.name]" style="color: rgb(64, 158, 255);" target="_blank">{{
-                          obj[item.name]
-                        }}</a>
-                    </div>
-                  </div>
-                  <div v-else-if="item.type == '多文本'" :class="{flex_row2_item_text:imgList.length}"
-                       class="diy_field diy_desc">
-                    <div>
-                      {{ obj[item.name] }}
-                    </div>
-                  </div>
-                  <!-- <div class="diy_field diy_html"  v-else-if="item.type == '编辑'" v-html="obj[item.name]" >
+								</div>
+								<div class="diy_field diy_url" :class="{flex_row2_item_text:imgList.length}" v-else-if="item.type == '网址'">
+									<div>
+										<a :href="obj[item.name]" target="_blank" style="color: rgb(64, 158, 255);">{{ obj[item.name] }}</a>
+									</div>
+								</div>
+								<div class="diy_field diy_desc" :class="{flex_row2_item_text:imgList.length}" v-else-if="item.type == '多文本'">
+									<div>
+										{{ obj[item.name] }}
+									</div>
+								</div>
+								<!-- <div class="diy_field diy_html"  v-else-if="item.type == '编辑'" v-html="obj[item.name]" >
 
-                  </div> -->
-                  <div v-else :class="{flex_row2_item_text:imgList.length}" class="diy_field diy_text">
+								</div> -->
+								<div class="diy_field diy_text" :class="{flex_row2_item_text:imgList.length}" v-else>
 									<span>
 										{{ obj[item.name] }}
 									</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="details_btn_wrap">
-          </div>
-          <!-- 富文本 -->
-          <div v-for="(item,index) in richList" v-show="$check_field('get',item.name)" :key="item+index"
-               class="rich_text">
-            <div class="view">
-              <div class="diy_title">
-                <span v-text="item.title"></span>
-              </div>
-              <div class="diy_html" v-html="obj[item.name]">
+								</div>
+							</div>
+						</div>
+							</div>
+					</div>
+					<div class="details_btn_wrap">
+							</div>
+						<!-- 富文本 -->
+				<div class="rich_text" v-for="(item,index) in richList" :key="item+index" v-show="$check_field('get',item.name)">
+						<div class="view">
+						<div class="diy_title">
+							<span v-text="item.title"></span>
+						</div>
+							<div class="diy_html" v-html="obj[item.name]" >
 
-              </div>
-            </div>
-          </div>
+						</div>
+						</div>
+				</div>
 
-        </div>
-      </div>
-    </div>
-  </div>
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>
-import mixin from "@/mixins/component.js";
-import mixinPage from "@/mixins/page.js";
+	import mixin from "@/mixins/component.js";
+	import mixinPage from "@/mixins/page.js";
 
-export default {
-  mixins: [mixin, mixinPage],
-  components: {},
-  props: {
-    obj: {
-      type: Object,
-      default: function () {
-        return {};
-      },
-    }
-  },
-  data() {
-    return {
-      praiseLen: this.obj["praise_len"],
-      imgList: [],
-      itemList: [
-        {
-          title: "学号",
-          name: "student_number",
-          type: "文本"
-        },
-        {
-          title: "姓名",
-          name: "full_name",
-          type: "文本"
-        },
-        {
-          title: "性别",
-          name: "gender",
-          type: "下拉"
-        },
-        {
-          title: "专业",
-          name: "major",
-          type: "文本"
-        },
-        {
-          title: "院系",
-          name: "department",
-          type: "文本"
-        },
-        {
-          title: "宿舍",
-          name: "dormitory",
-          type: "文本"
-        },
-      ],
-      richList: [],
-    };
-  },
-  methods: {
-    get_user_info(name, id) {
-      var obj = null;
-      var ret = "";
-      if (obj) {
-        ret = obj.nickname + "-" + obj.username;
-        // if(obj.nickname){
-        // 	ret = obj.nickname;
-        // }
-        // else{
-        // 	ret = obj.username;
-        // }
-      }
-      return ret;
-    },
+	export default {
+		mixins: [mixin,mixinPage],
+		components: {
 
-  },
-  created() {
-    setTimeout(() => {
-    }, 1000);
-  },
-  watch: {
-    obj: {
-      deep: true,
-      handler() {
-        this.praiseLen = this.obj["praise_len"]
-      }
-    }
-  },
-};
+		},
+		props: {
+			obj: {
+				type: Object,
+				default: function() {
+					return {};
+				},
+			}
+		},
+		data() {
+			return {
+				praiseLen: this.obj["praise_len"],
+				imgList: [
+				],
+				itemList: [
+						{
+							title: "学号",
+							name: "student_number",
+							type: "文本"
+						},
+						{
+							title: "姓名",
+							name: "full_name",
+							type: "文本"
+						},
+						{
+							title: "性别",
+							name: "gender",
+							type: "下拉"
+						},
+						{
+							title: "专业",
+							name: "major",
+							type: "文本"
+						},
+						{
+							title: "院系",
+							name: "department",
+							type: "文本"
+						},
+						{
+							title: "宿舍",
+							name: "dormitory",
+							type: "文本"
+						},
+				],
+				richList: [
+				],
+									};
+		},
+		methods: {
+									get_user_info(name,id){
+				var obj = null;
+										var ret = "";
+				if(obj){
+					ret = obj.nickname+"-"+obj.username;
+					// if(obj.nickname){
+					// 	ret = obj.nickname;
+					// }
+					// else{
+					// 	ret = obj.username;
+					// }
+				}
+				return ret;
+			},
+
+		},
+		created() {
+						      setTimeout(() => {
+      }, 1000);
+		},
+		watch:{
+			obj:{
+				deep: true,
+				handler(){
+					this.praiseLen = this.obj["praise_len"]
+				}
+			}
+		},
+	};
 </script>
 
 <style>

@@ -81,7 +81,7 @@
                         </div>
                     </div>
 
-
+                                    
                 </form>
                 <div class="layui-btn-container">
                     <a href="#" type="button" class="layui-btn layui-btn-normal" id="enroll">注册/Register</a>
@@ -101,14 +101,14 @@
     var BaseUrl = baseUrl()
     layui.use(['element', 'layer', 'util', 'jquery'], function () {
         var element = layui.element
-            , layer = layui.layer
-            , util = layui.util
-            , table = layui.table
-            , upload = layui.upload
-            , laydate = layui.laydate
-            , layedit = layui.layedit
-            , form = layui.form
-            , $ = layui.$;
+                , layer = layui.layer
+                , util = layui.util
+                , table = layui.table
+                , upload = layui.upload
+                , laydate = layui.laydate
+                , layedit = layui.layedit
+                , form = layui.form
+                , $ = layui.$;
 
         let form1 = {
             username: "",
@@ -149,6 +149,9 @@
         let enroll = document.getElementById("enroll")
 
 
+
+
+                        
         let num = null
         let source_table = null
         let token = null
@@ -173,7 +176,7 @@
         });
 
         // 数据
-
+                        
         enroll.onclick = async function () {
             form1['username'] = username.value;
             form1['password'] = password.value;
@@ -207,7 +210,7 @@
                 layer.msg('请选择用户组!');
             } else if (form1.user_group) {
 
-            }
+                                            }
         }
 
         var list_data = []
@@ -216,7 +219,7 @@
          * 获取路径对应操作权限 鉴权
          * @param {String} action 操作名
          */
-        function $check_register_field(action, field, path) {
+        function $check_register_field(action, field , path) {
             let o = $get_power(path);
             let auth;
             if (o && o[action] != 0 && o[action] != false) {
@@ -245,8 +248,8 @@
             return obj;
         }
 
-        function $get_list_data() {
-            if (!sessionStorage.personInfo) {
+        function $get_list_data(){
+            if (!sessionStorage.personInfo){
                 $.ajax({
                     url: BaseUrl + "/api/auth/get_list",
                     type: "get",
@@ -255,17 +258,17 @@
                         user_group: "游客"
                     },
                     success: function (data) {
-                        if (typeof data === 'string') {
+                        if (typeof data === 'string'){
                             data = JSON.parse(data)
                         }
-                        if (data && data.result && data.result.list) {
+                        if (data && data.result && data.result.list){
                             list_data = data.result.list
                             enroll_select();
                             $check_list_data();
                         }
                     }
                 });
-            } else {
+            }else {
                 list_data = JSON.parse(sessionStorage.list_data);
                 enroll_select();
                 $check_list_data();
@@ -273,8 +276,8 @@
 
         }
 
-        function $check_list_data() {
-        }
+        function $check_list_data(){
+                                    }
 
         $get_list_data()
     })

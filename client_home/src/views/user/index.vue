@@ -1,5 +1,5 @@
 <template>
-  <div id="user_index" class="page_user">
+  <div class="page_user" id="user_index">
     <div class="warp">
       <div class="container">
         <div class="row justify-content-between">
@@ -10,12 +10,12 @@
             </div>
           </div>
           <div class="col-12 col-md-9 user_bg">
-            <div class="card_default pl-2">
-              <div v-if="user.user_id" class="user_block">
+            <div class="card_default pl-2"  >
+              <div class="user_block" v-if="user.user_id">
                 <div class="img_block">
                   <img
-                      :src="user.avatar ? $fullUrl(user.avatar) : '/img/default.png'"
-                      style="width: 6rem; height: 6rem"
+                    style="width: 6rem; height: 6rem"
+                    :src="user.avatar ? $fullUrl(user.avatar) : '/img/default.png'"
                   />
                 </div>
                 <div class="nickname">
@@ -42,7 +42,6 @@
 <script>
 import mixin from "@/mixins/page.js";
 import list_menu_user from "@/components/diy/list_menu_user.vue";
-
 export default {
   mixins: [mixin],
   data() {
@@ -70,10 +69,10 @@ export default {
     };
   },
   methods: {
-    sign_out() {
-      this.$store.commit('sign_out');
-      location.href = "/";
-      location.reload();
+    sign_out(){
+        this.$store.commit('sign_out');
+        location.href = "/";
+        location.reload();
     }
   },
   components: {
@@ -86,7 +85,6 @@ export default {
 .container {
   min-height: 800px;
 }
-
 .user_block {
   display: flex;
   flex-direction: column;
@@ -95,37 +93,29 @@ export default {
   padding: 1rem;
   margin-bottom: 1rem;
 }
-
 .user_block > * {
   margin-top: 5px;
 }
-
 .img_block img {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 8px rgba(0, 0, 0, 0.04);
 }
-
 .nickname {
   color: var(--color_black);
 }
-
 .user_group {
   color: var(--color_subtitle);
 }
-
 .user_bg {
   background: url(../../../public/img/user_bg.jpg);
 }
-
 .log_out {
   margin-top: 20px;
   height: 30px;
 }
-
-.log_out > * {
+.log_out >*{
   line-height: 20px;
 }
-
-.sign_in {
+.sign_in{
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -133,8 +123,7 @@ export default {
   padding: 5rem;
   margin-top: 100px;
 }
-
-.btn_block {
+.btn_block{
   width: 90px;
   height: 60px;
 }

@@ -1,11 +1,11 @@
 <template>
   <div class="list_menu">
     <router-link
-        v-for="(o, i) in list_info"
-        :key="i"
-        :class="{ selected: o.selected }"
-        :to="o.url"
-        class="menu_item"
+      :to="o.url"
+      class="menu_item"
+      :class="{ selected: o.selected }"
+      v-for="(o, i) in list_info"
+      :key="i"
     >
       <span class="left_span">{{ o.title }}</span>
       <span class="right_span"><b-icon :icon="o.icon"></b-icon></span>
@@ -70,7 +70,6 @@ export default {
   flex: 0 0 25%;
   border-bottom: 1px solid #eee;
 }
-
 .menu_item {
   display: flex;
   justify-content: space-between;
@@ -79,15 +78,12 @@ export default {
   border-bottom: none;
   background-color: #fff;
 }
-
 .menu_item.selected {
   background-color: #000;
 }
-
 .menu_item.selected span {
   color: #fff !important;
 }
-
 .content {
   flex: 0 0 74%;
 }

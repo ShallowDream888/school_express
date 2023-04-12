@@ -6,13 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="project-ssm" />
+        <module name="ssm" />
         <module name="project-jsp" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="project-jsp" target="1.8" />
-      <module name="project-ssm" target="1.8" />
+      <module name="ssm" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

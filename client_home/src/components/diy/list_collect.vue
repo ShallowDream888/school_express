@@ -1,8 +1,9 @@
 <template>
   <div class="list_collect">
-    <div v-for="(o, i) in list" :key="i" class="item_collect">
+    <div class="item_collect" v-for="(o, i) in list" :key="i">
       <router-link
-          :to="
+        class="collect_box"
+        :to="
           '/' +
           o[vm.source_table] +
           '/details?' +
@@ -10,12 +11,11 @@
           '=' +
           o[vm.source_id]
         "
-          class="collect_box"
       >
         <div class="left_block">
           <img
-              :src="o[vm.img] ? $fullUrl(o[vm.img]) : '/img/default.png'"
-              style="width: 3rem; height: 3rem"
+            style="width: 3rem; height: 3rem"
+            :src="o[vm.img] ? $fullUrl(o[vm.img]) : '/img/default.png'"
           />
         </div>
         <div class="right_block">
@@ -24,7 +24,7 @@
               {{ o[vm.title] }}
             </div>
             <div class="time">
-              {{ o[vm.create_time] | formatDate }}
+              {{ o[vm.create_time] | formatDate}}
             </div>
           </div>
         </div>
@@ -36,7 +36,6 @@
 
 <script>
 import mixin from "@/mixins/page.js";
-
 export default {
   mixins: [mixin],
   props: {
@@ -66,16 +65,16 @@ export default {
      * 删除收藏
      * @param { Number } collect_id 收藏id
      * @param { Number } index 删除位置
-     */
+      */
     del_collect(collect_id, index) {
       this.$get(
-          "~/api/collect/del",
-          {
-            collect_id,
-          },
-          (res) => {
-            this.list.splice(index, 1);
-          }
+        "~/api/collect/del",
+        {
+          collect_id,
+        },
+        (res) => {
+          this.list.splice(index, 1);
+        }
       );
     },
   },
@@ -115,14 +114,12 @@ export default {
   justify-content: space-between;
   margin-bottom: 0.6rem;
 }
-
 .top_comment .title {
   flex: 0 0 55%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-
 .top_comment .time {
   flex: 20%;
   font-size: 0.5rem;
@@ -135,7 +132,6 @@ export default {
   line-height: 20px;
   font-size: 15px;
 }
-
 .btn_delete:hover {
   background: var(--color_primary_b);
   border-color: var(--color_primary_b);

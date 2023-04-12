@@ -20,7 +20,6 @@ function sublim() {
 function dj() {
     draw(show_num);
 }
-
 dj()
 
 function draw(show_num) {
