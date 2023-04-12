@@ -1,16 +1,14 @@
 package com.project.demo.dao;
 
-import java.util.List;
-
 import com.project.demo.dao.base.BaseMapper;
 import com.project.demo.entity.Praise;
 
+import java.util.List;
+
 /**
  * 点赞：Mapper接口
- *
  */
-public interface PraiseMapper extends BaseMapper<Praise>
-{
+public interface PraiseMapper extends BaseMapper<Praise> {
     /**
      * 查询点赞：
      *

@@ -1,12 +1,12 @@
 <template>
   <div class="score_star">
-    <span class="icon_wrap" v-for="i in 5" :key="i">
-      <b-icon icon="star-fill" v-if="score >= i"></b-icon>
+    <span v-for="i in 5" :key="i" class="icon_wrap">
+      <b-icon v-if="score >= i" icon="star-fill"></b-icon>
       <b-icon
-        icon="star-half"
-        v-else-if="Math.ceil(score) ===i "
+          v-else-if="Math.ceil(score) ===i "
+          icon="star-half"
       ></b-icon>
-      <b-icon icon="star" v-else></b-icon>
+      <b-icon v-else icon="star"></b-icon>
     </span>
   </div>
 </template>
@@ -35,6 +35,7 @@ export default {
   align-items: center;
   color: var(--color_primary);
 }
+
 .icon_wrap {
   padding-right: 3px;
 }

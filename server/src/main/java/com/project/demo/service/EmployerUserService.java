@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 
 /**
  * 雇主用户：(EmployerUser)表服务接口
- *
  */
 @Service
 public class EmployerUserService extends BaseService<EmployerUser> {

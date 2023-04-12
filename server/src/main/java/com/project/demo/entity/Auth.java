@@ -5,7 +5,8 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import lombok.*;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
@@ -15,7 +16,7 @@ import java.sql.Timestamp;
  * 定制授权(Auth)表实体类
  *
  * @author xxx
- *@since 202X-XX-XX
+ * @since 202X-XX-XX
  */
 @TableName("auth")
 @Data
@@ -60,17 +61,17 @@ public class Auth implements Serializable {
     @TableField(value = "path")
     private String path;
 
-	/**
-	 * 位置：
-	 */
+    /**
+     * 位置：
+     */
     @TableField(value = "position")
-	private String position;
+    private String position;
 
-	/**
-	 * 跳转方式：
-	 */
+    /**
+     * 跳转方式：
+     */
     @TableField(value = "mode")
-	private String mode;
+    private String mode;
 
     /**
      * 是否可增加：

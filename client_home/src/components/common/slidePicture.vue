@@ -20,14 +20,14 @@ export default {
   mounted() {
     const _this = this;
     jigsaw.init(
-      document.getElementById("captcha"),
-      function () {
-        _this.$emit("slidePictureState", true);
-      },
-      function () {
-        _this.$emit("slidePictureState", false);
-        _this.$message.error("校验失败");
-      }
+        document.getElementById("captcha"),
+        function () {
+          _this.$emit("slidePictureState", true);
+        },
+        function () {
+          _this.$emit("slidePictureState", false);
+          _this.$message.error("校验失败");
+        }
     );
   },
   methods: {
@@ -59,10 +59,12 @@ export default {
 .slide-picture .title div {
   display: inline-block;
 }
+
 .slide-picture .title div:nth-child(1) {
   color: #333;
   float: left;
 }
+
 .slide-picture .title div:nth-child(2) {
   color: #333;
   float: right;
@@ -78,6 +80,7 @@ export default {
   right: 12px;
   top: 12px;
 }
+
 .close img {
   width: 13px;
   height: 13px;

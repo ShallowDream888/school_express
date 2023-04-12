@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 
 /**
  * (Upload)表服务接口
- *
  */
 @Service
 public class UploadService extends BaseService<Upload> {

@@ -7,10 +7,8 @@ import java.util.List;
 
 /**
  * 文章频道：用于汇总浏览文章，在不同频道下展示不同文章。Mapper接口
- *
  */
-public interface ArticleTypeMapper extends BaseMapper<ArticleType>
-{
+public interface ArticleTypeMapper extends BaseMapper<ArticleType> {
     /**
      * 查询文章频道：用于汇总浏览文章，在不同频道下展示不同文章。
      *

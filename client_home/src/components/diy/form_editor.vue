@@ -6,13 +6,14 @@
       </quill-editor>
     </div>
     <div class="btn_publish">
-      <b-button variant="outline-primary" block @click="publish()">发表</b-button>
+      <b-button block variant="outline-primary" @click="publish()">发表</b-button>
     </div>
   </div>
 </template>
 
 <script>
 import mixin from "@/mixins/component.js";
+
 export default {
   mixins: [mixin],
   props: {
@@ -30,7 +31,7 @@ export default {
         return "";
       },
     },
-    publish_flag:{
+    publish_flag: {
       type: Boolean,
       default() {
         return true;
@@ -55,12 +56,12 @@ export default {
         avatar: this.user.avatar,
         nickname: this.user.nickname,
       });
-      if(!form.content){
+      if (!form.content) {
         this.$toast("输入内容不能为空")
         return
       }
       var post_url = this.post_url
-      if(!post_url){
+      if (!post_url) {
         post_url = "~/api/comment/add?"
       }
       this.$post(post_url, form, (res) => {
@@ -82,10 +83,12 @@ export default {
   text-align: right;
   margin-top: 10px;
 }
+
 .btn_publish button {
   border-radius: 3px;
   cursor: pointer;
 }
+
 .btn_publish button:hover {
   background: var(--color_success_b);
   color: white;

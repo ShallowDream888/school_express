@@ -1,16 +1,14 @@
 package com.project.demo.dao;
 
-import java.util.List;
-
 import com.project.demo.dao.base.BaseMapper;
 import com.project.demo.entity.Forum;
 
+import java.util.List;
+
 /**
  * 论坛：Mapper接口
- *
  */
-interface ForumMapper extends BaseMapper<Forum>
-{
+interface ForumMapper extends BaseMapper<Forum> {
     /**
      * 查询论坛：
      *

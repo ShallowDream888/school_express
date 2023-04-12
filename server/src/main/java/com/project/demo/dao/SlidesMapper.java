@@ -1,16 +1,14 @@
 package com.project.demo.dao;
 
-import java.util.List;
-
 import com.project.demo.dao.base.BaseMapper;
 import com.project.demo.entity.Slides;
 
+import java.util.List;
+
 /**
  * 轮播图：Mapper接口
- *
  */
-public interface SlidesMapper extends BaseMapper<Slides>
-{
+public interface SlidesMapper extends BaseMapper<Slides> {
     /**
      * 查询轮播图：
      *

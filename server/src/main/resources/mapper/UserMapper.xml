@@ -1,43 +1,56 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
-PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.project.demo.dao.UserMapper">
 
     <resultMap type="com.project.demo.entity.User" id="UserResult">
-        <result property="userId"    column="user_id"    />
-        <result property="state"    column="state"    />
-        <result property="userGroup"    column="user_group"    />
-        <result property="loginTime"    column="login_time"    />
-        <result property="phone"    column="phone"    />
-        <result property="phoneState"    column="phone_state"    />
-        <result property="username"    column="username"    />
-        <result property="nickname"    column="nickname"    />
-        <result property="password"    column="password"    />
-        <result property="email"    column="email"    />
-        <result property="emailState"    column="email_state"    />
-        <result property="avatar"    column="avatar"    />
-        <result property="createTime"    column="create_time"    />
+        <result property="userId" column="user_id"/>
+        <result property="state" column="state"/>
+        <result property="userGroup" column="user_group"/>
+        <result property="loginTime" column="login_time"/>
+        <result property="phone" column="phone"/>
+        <result property="phoneState" column="phone_state"/>
+        <result property="username" column="username"/>
+        <result property="nickname" column="nickname"/>
+        <result property="password" column="password"/>
+        <result property="email" column="email"/>
+        <result property="emailState" column="email_state"/>
+        <result property="avatar" column="avatar"/>
+        <result property="createTime" column="create_time"/>
     </resultMap>
 
     <sql id="selectUserVo">
-        select user_id, state, user_group, login_time, phone, phone_state, username, nickname, password, email, email_state, avatar, create_time from user
+        select user_id,
+               state,
+               user_group,
+               login_time,
+               phone,
+               phone_state,
+               username,
+               nickname,
+               password,
+               email,
+               email_state,
+               avatar,
+               create_time
+        from user
     </sql>
 
     <select id="selectUserList" parameterType="com.project.demo.entity.User" resultMap="UserResult">
         <include refid="selectUserVo"/>
         <where>
-            <if test="state != null "> and state = #{state}</if>
-            <if test="userGroup != null  and userGroup != ''"> and user_group = #{userGroup}</if>
-            <if test="loginTime != null "> and login_time = #{loginTime}</if>
-            <if test="phone != null  and phone != ''"> and phone = #{phone}</if>
-            <if test="phoneState != null "> and phone_state = #{phoneState}</if>
-            <if test="username != null  and username != ''"> and username like concat('%', #{username}, '%')</if>
-            <if test="nickname != null  and nickname != ''"> and nickname like concat('%', #{nickname}, '%')</if>
-            <if test="password != null  and password != ''"> and password = #{password}</if>
-            <if test="email != null  and email != ''"> and email = #{email}</if>
-            <if test="emailState != null "> and email_state = #{emailState}</if>
-            <if test="avatar != null  and avatar != ''"> and avatar = #{avatar}</if>
+            <if test="state != null ">and state = #{state}</if>
+            <if test="userGroup != null  and userGroup != ''">and user_group = #{userGroup}</if>
+            <if test="loginTime != null ">and login_time = #{loginTime}</if>
+            <if test="phone != null  and phone != ''">and phone = #{phone}</if>
+            <if test="phoneState != null ">and phone_state = #{phoneState}</if>
+            <if test="username != null  and username != ''">and username like concat('%', #{username}, '%')</if>
+            <if test="nickname != null  and nickname != ''">and nickname like concat('%', #{nickname}, '%')</if>
+            <if test="password != null  and password != ''">and password = #{password}</if>
+            <if test="email != null  and email != ''">and email = #{email}</if>
+            <if test="emailState != null ">and email_state = #{emailState}</if>
+            <if test="avatar != null  and avatar != ''">and avatar = #{avatar}</if>
         </where>
     </select>
 
@@ -61,7 +74,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="emailState != null ">email_state,</if>
             <if test="avatar != null  and avatar != ''">avatar,</if>
             <if test="createTime != null ">create_time,</if>
-         </trim>
+        </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="state != null ">#{state},</if>
             <if test="userGroup != null  and userGroup != ''">#{userGroup},</if>
@@ -75,7 +88,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="emailState != null ">#{emailState},</if>
             <if test="avatar != null  and avatar != ''">#{avatar},</if>
             <if test="createTime != null ">#{createTime},</if>
-         </trim>
+        </trim>
     </insert>
 
     <update id="updateUser" parameterType="com.project.demo.entity.User">
@@ -98,7 +111,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     </update>
 
     <delete id="deleteUserById" parameterType="Integer">
-        delete from user where user_id = #{userId}
+        delete
+        from user
+        where user_id = #{userId}
     </delete>
 
     <delete id="deleteUserByIds" parameterType="String">
@@ -109,6 +124,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     </delete>
 
     <select id="selectExamineState" resultType="String">
-        select examine_state from ${sourceTable} WHERE user_id = #{userId}
+        select examine_state
+        from ${sourceTable}
+        WHERE user_id = #{userId}
     </select>
 </mapper>

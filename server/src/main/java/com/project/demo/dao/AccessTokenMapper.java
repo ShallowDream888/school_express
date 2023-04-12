@@ -1,16 +1,14 @@
 package com.project.demo.dao;
 
-import java.util.List;
-
 import com.project.demo.dao.base.BaseMapper;
 import com.project.demo.entity.AccessToken;
 
+import java.util.List;
+
 /**
  * 临时访问牌Mapper接口
- *
  */
-public interface AccessTokenMapper extends BaseMapper<AccessToken>
-{
+public interface AccessTokenMapper extends BaseMapper<AccessToken> {
     /**
      * 查询临时访问牌
      *

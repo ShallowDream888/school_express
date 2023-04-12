@@ -1,32 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
-PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.project.demo.dao.ForumTypeMapper">
 
     <resultMap type="com.project.demo.entity.ForumType" id="ForumTypeResult">
-        <result property="typeId"    column="type_id"    />
-        <result property="name"    column="name"    />
-        <result property="description"    column="description"    />
-        <result property="url"    column="url"    />
-        <result property="fatherId"    column="father_id"    />
-        <result property="icon"    column="icon"    />
-        <result property="createTime"    column="create_time"    />
-        <result property="updateTime"    column="update_time"    />
+        <result property="typeId" column="type_id"/>
+        <result property="name" column="name"/>
+        <result property="description" column="description"/>
+        <result property="url" column="url"/>
+        <result property="fatherId" column="father_id"/>
+        <result property="icon" column="icon"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
     </resultMap>
 
     <sql id="selectForumTypeVo">
-        select type_id, name, description, url, father_id, icon, create_time, update_time from forum_type
+        select type_id,
+               name,
+               description,
+               url,
+               father_id,
+               icon,
+               create_time,
+               update_time
+        from forum_type
     </sql>
 
     <select id="selectForumTypeList" parameterType="com.project.demo.entity.ForumType" resultMap="ForumTypeResult">
         <include refid="selectForumTypeVo"/>
         <where>
-            <if test="name != null  and name != ''"> and name like concat('%', #{name}, '%')</if>
-            <if test="description != null  and description != ''"> and description = #{description}</if>
-            <if test="url != null  and url != ''"> and url = #{url}</if>
-            <if test="fatherId != null "> and father_id = #{fatherId}</if>
-            <if test="icon != null  and icon != ''"> and icon = #{icon}</if>
+            <if test="name != null  and name != ''">and name like concat('%', #{name}, '%')</if>
+            <if test="description != null  and description != ''">and description = #{description}</if>
+            <if test="url != null  and url != ''">and url = #{url}</if>
+            <if test="fatherId != null ">and father_id = #{fatherId}</if>
+            <if test="icon != null  and icon != ''">and icon = #{icon}</if>
         </where>
     </select>
 
@@ -35,7 +43,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         where type_id = #{typeId}
     </select>
 
-    <insert id="insertForumType" parameterType="com.project.demo.entity.ForumType" useGeneratedKeys="true" keyProperty="typeId">
+    <insert id="insertForumType" parameterType="com.project.demo.entity.ForumType" useGeneratedKeys="true"
+            keyProperty="typeId">
         insert into forum_type
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="name != null  and name != ''">name,</if>
@@ -45,7 +54,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="icon != null  and icon != ''">icon,</if>
             <if test="createTime != null ">create_time,</if>
             <if test="updateTime != null ">update_time,</if>
-         </trim>
+        </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="name != null  and name != ''">#{name},</if>
             <if test="description != null  and description != ''">#{description},</if>
@@ -54,7 +63,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="icon != null  and icon != ''">#{icon},</if>
             <if test="createTime != null ">#{createTime},</if>
             <if test="updateTime != null ">#{updateTime},</if>
-         </trim>
+        </trim>
     </insert>
 
     <update id="updateForumType" parameterType="com.project.demo.entity.ForumType">
@@ -72,7 +81,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     </update>
 
     <delete id="deleteForumTypeById" parameterType="Integer">
-        delete from forum_type where type_id = #{typeId}
+        delete
+        from forum_type
+        where type_id = #{typeId}
     </delete>
 
     <delete id="deleteForumTypeByIds" parameterType="String">

@@ -5,8 +5,7 @@ import com.project.demo.entity.EmployerUser;
 
 /**
  * 雇主用户：(EmployerUser)Mapper接口
- *
  */
-public interface EmployerUserMapper extends BaseMapper<EmployerUser>{
+public interface EmployerUserMapper extends BaseMapper<EmployerUser> {
 
 }

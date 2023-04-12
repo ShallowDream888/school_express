@@ -1,5 +1,5 @@
 <template>
-  <div class="page_notice notice-detail" id="notice_list">
+  <div id="notice_list" class="page_notice notice-detail">
     <div class="warp">
       <div class="container">
         <div class="row">
@@ -11,7 +11,7 @@
                   <h5>{{ obj.title }}</h5>
                 </div>
                 <div class="notice_creat_time">
-                  {{ $toTime( obj.create_time,"yyyy-MM-dd hh:mm:ss") }}
+                  {{ $toTime(obj.create_time, "yyyy-MM-dd hh:mm:ss") }}
                 </div>
                 <div class="notice_content" v-html="obj.content"></div>
               </div>
@@ -25,6 +25,7 @@
 
 <script>
 import mixin from "@/mixins/page.js";
+
 export default {
   mixins: [mixin],
   data() {
@@ -53,23 +54,29 @@ export default {
 .page_notice {
   text-align: center;
 }
-.container{
+
+.container {
   min-height: 600px;
 }
-.notice_list >*{
+
+.notice_list > * {
   padding: 10px;
 }
+
 .page_notice > view {
   margin-top: 1rem;
 }
-.notice_title{
+
+.notice_title {
   margin-top: 20px;
 
 }
-.notice_creat_time{
+
+.notice_creat_time {
   color: var(--color_tip);
 }
-.notice_content{
+
+.notice_content {
   color: var(--color_paragraph);
   text-align: left;
 }

@@ -34,15 +34,13 @@
             </li>
         </ul>
 
-        
 
-
-                    <ul class="layui-nav layui-layout-left">
-                <li class="layui-nav-item layui-hide layui-show-md-inline-block"
-                    style="float: left; margin-left: 50px;">
-                    <a id="websiteHomePage" href="javascript:void(0)">网站首页</a>
-            </ul>
-            </div>
+        <ul class="layui-nav layui-layout-left">
+            <li class="layui-nav-item layui-hide layui-show-md-inline-block"
+                style="float: left; margin-left: 50px;">
+                <a id="websiteHomePage" href="javascript:void(0)">网站首页</a>
+        </ul>
+    </div>
 
     <div class="layui-side layui-bg-black">
         <div class="layui-side-scroll">
@@ -57,45 +55,45 @@
                     </dl>
                 </li>
 
-                                    <li class="layui-nav-item" id="site" style="display: none;">
-                        <a class="" href="javascript:;">公共管理/Public Manage</a>
-                        <dl class="layui-nav-child">
-                                                            <dd><a href="./slides/table.jsp" target="main_self_frame">轮播图</a></dd>
-                                                                                        <dd><a href="./notice/table.jsp" target="main_self_frame">公告栏</a></dd>
-                                                                                </dl>
-                    </li>
-                
+                <li class="layui-nav-item" id="site" style="display: none;">
+                    <a class="" href="javascript:;">公共管理/Public Manage</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="./slides/table.jsp" target="main_self_frame">轮播图</a></dd>
+                        <dd><a href="./notice/table.jsp" target="main_self_frame">公告栏</a></dd>
+                    </dl>
+                </li>
+
                 <li class="layui-nav-item" id="userManagement" style="display: none;">
                     <a href="javascript:;">用户管理/User Manage</a>
                     <dl class="layui-nav-child">
                         <dd><a href="./user/table.jsp" target="main_self_frame" id="user">管理员</a></dd>
-                                                                                    <dd style="display: none" id="employer_user">
-                                    <a href="./employer_user/table.jsp" target="main_self_frame">雇主用户</a>
-                                </dd>
-                                                                                                                <dd style="display: none" id="runner">
-                                    <a href="./runner/table.jsp" target="main_self_frame">跑腿用户</a>
-                                </dd>
-                                                                                                                                                                                </dl>
+                        <dd style="display: none" id="employer_user">
+                            <a href="./employer_user/table.jsp" target="main_self_frame">雇主用户</a>
+                        </dd>
+                        <dd style="display: none" id="runner">
+                            <a href="./runner/table.jsp" target="main_self_frame">跑腿用户</a>
+                        </dd>
+                    </dl>
                 </li>
 
 
-                                                            <li class="layui-nav-item" id="content" style="display: none;">
-                            <a href="javascript:;">信息管理/Information Manage</a>
-                            <dl class="layui-nav-child">
-                                                                    <dd><a href="./forum/table.jsp" target="main_self_frame" id="forum"
-                                           style="display: none">论坛</a></dd>
-                                    <dd><a href="./forum_type/table.jsp" target="main_self_frame" id="forum_type"
-                                           style="display: none">论坛分类</a></dd>
-                                                                                                    <dd><a href="./article/table.jsp" target="main_self_frame" id="article"
-                                           style="display: none">文章</a>
-                                    </dd>
-                                    <dd><a href="./article_type/table.jsp" target="main_self_frame" id="article_type"
-                                           style="display: none">
-                                        文章分类</a></dd>
-                                                                                            </dl>
-                        </li>
-                                    
-                
+                <li class="layui-nav-item" id="content" style="display: none;">
+                    <a href="javascript:;">信息管理/Information Manage</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="./forum/table.jsp" target="main_self_frame" id="forum"
+                               style="display: none">论坛</a></dd>
+                        <dd><a href="./forum_type/table.jsp" target="main_self_frame" id="forum_type"
+                               style="display: none">论坛分类</a></dd>
+                        <dd><a href="./article/table.jsp" target="main_self_frame" id="article"
+                               style="display: none">文章</a>
+                        </dd>
+                        <dd><a href="./article_type/table.jsp" target="main_self_frame" id="article_type"
+                               style="display: none">
+                            文章分类</a></dd>
+                    </dl>
+                </li>
+
+
             </ul>
         </div>
     </div>
@@ -118,11 +116,11 @@
     let user_group = personInfo.user_group
 
     console.log(personInfo)
-                let site = document.querySelector('#site')
+    let site = document.querySelector('#site')
 
-                                        let content = document.querySelector('#content')
+    let content = document.querySelector('#content')
 
-                        async function get_list() {
+    async function get_list() {
 
         // 更多管理请求
 
@@ -136,9 +134,9 @@
         sessionStorage.setItem('list_data', [list_data])
 
         var tables = ren.result.list;
-                    page_title('/article/table', 'article', tables)
-            page_title('/article_type/table', 'article_type', tables)
-        
+        page_title('/article/table', 'article', tables)
+        page_title('/article_type/table', 'article_type', tables)
+
         function $get_power(path) {
             var list_data = JSON.parse(sessionStorage.list_data)
             var list = list_data;
@@ -182,10 +180,10 @@
         for (var i = 0; i < tables.length; i++) {
             var o = tables[i];
             if (o.path.indexOf("/table") !== -1) {
-                let list = ["exam", "article", "article_type", , "comment", "forum", "forum_type","notice"];
-                                                                            list.push("employer_user");
-                                                                                list.push("runner");
-                                                                                                                            if (list.indexOf(o.table_name) === -1) {
+                let list = ["exam", "article", "article_type", , "comment", "forum", "forum_type", "notice"];
+                list.push("employer_user");
+                list.push("runner");
+                if (list.indexOf(o.table_name) === -1) {
                     if ($check_action(o.path)) {
                         lt.push(o);
                     }
@@ -213,44 +211,44 @@
         let userManagement = document.querySelector('#userManagement')
         let user = document.querySelector('#user')
 
-                let more = document.querySelectorAll('#more')
+        let more = document.querySelectorAll('#more')
 
-        
+
         if (personInfo.user_group == '管理员') {
-                            site.style.display = 'block'
-            
+            site.style.display = 'block'
+
             userManagement.style.display = 'block'
-                                                content.style.display = 'block'
-                                        
-                        more.forEach((item) => {
+            content.style.display = 'block'
+
+            more.forEach((item) => {
                 item.style.display = 'block'
             })
         } else {
-                        more.forEach((item) => {
+            more.forEach((item) => {
                 item.style.display = 'block'
             })
         }
-        if(user_group == '管理员' || $check_group(['/user/table','/user_group/table','/auth/table'                            ,'/employer_user/table'
-                                                ,'/runner/table'
-                                                                    ])){
+        if (user_group == '管理员' || $check_group(['/user/table', '/user_group/table', '/auth/table', '/employer_user/table'
+            , '/runner/table'
+        ])) {
             userManagement.style.display = 'block'
         }
-        if(user_group !== '管理员'){
+        if (user_group !== '管理员') {
             user.style.display = "none"
         }
-                                    let employer_user = document.querySelector('#employer_user')
-                if(user_group == '管理员' || $check_action('/employer_user/table')){
-                        employer_user.style.display = "block"
-                }else {
-                        employer_user.style.display = "none"
-                }
-                                                let runner = document.querySelector('#runner')
-                if(user_group == '管理员' || $check_action('/runner/table')){
-                        runner.style.display = "block"
-                }else {
-                        runner.style.display = "none"
-                }
-                                                            
+        let employer_user = document.querySelector('#employer_user')
+        if (user_group == '管理员' || $check_action('/employer_user/table')) {
+            employer_user.style.display = "block"
+        } else {
+            employer_user.style.display = "none"
+        }
+        let runner = document.querySelector('#runner')
+        if (user_group == '管理员' || $check_action('/runner/table')) {
+            runner.style.display = "block"
+        } else {
+            runner.style.display = "none"
+        }
+
         // 权限判断
         /**
          * 获取路径对应操作权限 鉴权
@@ -275,41 +273,41 @@
             }
             return "";
         }
-        
-                                                        let forum = document.querySelector("#forum")
-                    let forum_type = document.querySelector("#forum_type")
-                    if (user_group == "管理员" || $check_action('/forum/table')) {
-                        forum.style.display = "block"
-                        if ($page_title('/forum/table')) {
-                            forum.innerHTML = $page_title('/forum/table')
-                        }
-                    }
-                    if (user_group == "管理员" || $check_action('/forum_type/table')) {
-                        forum_type.style.display = "block"
-                        if ($page_title('/forum_type/table')) {
-                            forum_type.innerHTML = $page_title('/forum_type/table')
-                        }
-                    }
-                                                    let article = document.querySelector("#article")
-                    let article_type = document.querySelector("#article_type")
-                    if (user_group == "管理员" || $check_action('/article/table')) {
-                        article.style.display = "block"
-                        if ($page_title('/article/table')) {
-                            article.innerHTML = $page_title('/article/table')
-                        }
-                    }
-                    if (user_group == "管理员" || $check_action('/article_type/table')) {
-                        article_type.style.display = "block"
-                        if ($page_title('/article_type/table')) {
-                            article_type.innerHTML = $page_title('/article_type/table')
-                        }
-                    }
-                                                    
+
+        let forum = document.querySelector("#forum")
+        let forum_type = document.querySelector("#forum_type")
+        if (user_group == "管理员" || $check_action('/forum/table')) {
+            forum.style.display = "block"
+            if ($page_title('/forum/table')) {
+                forum.innerHTML = $page_title('/forum/table')
+            }
+        }
+        if (user_group == "管理员" || $check_action('/forum_type/table')) {
+            forum_type.style.display = "block"
+            if ($page_title('/forum_type/table')) {
+                forum_type.innerHTML = $page_title('/forum_type/table')
+            }
+        }
+        let article = document.querySelector("#article")
+        let article_type = document.querySelector("#article_type")
+        if (user_group == "管理员" || $check_action('/article/table')) {
+            article.style.display = "block"
+            if ($page_title('/article/table')) {
+                article.innerHTML = $page_title('/article/table')
+            }
+        }
+        if (user_group == "管理员" || $check_action('/article_type/table')) {
+            article_type.style.display = "block"
+            if ($page_title('/article_type/table')) {
+                article_type.innerHTML = $page_title('/article_type/table')
+            }
+        }
+
         if ($check_group(['/article/table', '/article_type/table', '/exam/table']) || $check_action('/forum/table') || $check_action('/forum_type/table') || $check_action('/article/table') || $check_action('/article_type/table') || $check_action('/exam/table')) {
             content.style.display = "block"
         }
 
-        
+
         /**
          * 获取权限
          * @param {String} path 路由路径
@@ -337,14 +335,14 @@
                 if (o.path === "/order/table") {
 
                     path1 = o.path
-                        $get_power(o.path)
+                    $get_power(o.path)
                 }
                 if (o.path === "/goods_type/table") {
 
                     path1 = o.path
-                        $get_power(o.path)
+                    $get_power(o.path)
                 }
-                
+
             }
         }
 
@@ -368,13 +366,13 @@
 
     layui.use(['element', 'layer', 'util'], function () {
         var element = layui.element
-                , layer = layui.layer
-                , util = layui.util
-                , $ = layui.$;
+            , layer = layui.layer
+            , util = layui.util
+            , $ = layui.$;
 
         element.on("nav(test2)", function () {
             if ($(this).context.innerHTML == '退出/Exit') {
-                let {data: res} = axios.get(BaseUrl + '/api/user/quit',{
+                let {data: res} = axios.get(BaseUrl + '/api/user/quit', {
                     headers: {
                         "x-auth-token": sessionStorage.token
                     }
@@ -389,9 +387,9 @@
 
     let websiteHomePage = document.querySelector('#websiteHomePage')
     websiteHomePage.onclick = function () {
-        if (sessionStorage && sessionStorage.token){
-            location.href = "http://localhost:8081/?token="+sessionStorage.token;
-        }else {
+        if (sessionStorage && sessionStorage.token) {
+            location.href = "http://localhost:8081/?token=" + sessionStorage.token;
+        } else {
             location.href = "http://localhost:8081/"
         }
     }

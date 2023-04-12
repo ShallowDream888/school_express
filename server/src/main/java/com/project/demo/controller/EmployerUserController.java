@@ -1,8 +1,8 @@
 package com.project.demo.controller;
 
+import com.project.demo.controller.base.BaseController;
 import com.project.demo.entity.EmployerUser;
 import com.project.demo.service.EmployerUserService;
-import com.project.demo.controller.base.BaseController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,7 +17,6 @@ import java.util.Map;
 
 /**
  * 雇主用户：(EmployerUser)表控制层
- *
  */
 @RestController
 @RequestMapping("/employer_user")
@@ -35,11 +34,11 @@ public class EmployerUserController extends BaseController<EmployerUser, Employe
     @PostMapping("/add")
     @Transactional
     public Map<String, Object> add(HttpServletRequest request) throws IOException {
-        Map<String,Object> paramMap = service.readBody(request.getReader());
+        Map<String, Object> paramMap = service.readBody(request.getReader());
         Map<String, String> mapstudent_number = new HashMap<>();
-        mapstudent_number.put("student_number",String.valueOf(paramMap.get("student_number")));
+        mapstudent_number.put("student_number", String.valueOf(paramMap.get("student_number")));
         List liststudent_number = service.selectBaseList(service.select(mapstudent_number, new HashMap<>()));
-        if (liststudent_number.size()>0){
+        if (liststudent_number.size() > 0) {
             return error(30000, "字段学号内容不能重复");
         }
         this.addMap(paramMap);

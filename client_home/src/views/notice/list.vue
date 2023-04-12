@@ -1,5 +1,5 @@
 <template>
-  <div class="page_notice" id="notice_list">
+  <div id="notice_list" class="page_notice">
     <div class="warp">
       <div class="container">
         <div class="row">
@@ -8,13 +8,13 @@
               <!-- 公告列表 -->
               <div class="notice_list">
                 <div class="notice_list_title">
-                  <span class="title">{{$page_title("/notice/list") || "公告列表"}}</span>
+                  <span class="title">{{ $page_title("/notice/list") || "公告列表" }}</span>
                 </div>
                 <router-link
-                  class="notice_block"
-                  v-for="(o, i) in list"
-                  :key="i"
-                  :to="'/notice/details?' + 'notice_id' + '=' + o.notice_id"
+                    v-for="(o, i) in list"
+                    :key="i"
+                    :to="'/notice/details?' + 'notice_id' + '=' + o.notice_id"
+                    class="notice_block"
                 >
                   <div class="notice_title ellipsis_2">
                     {{ o.title }}
@@ -32,8 +32,8 @@
           <div class="col overflow-auto flex_cc">
             <b-pagination
                 v-model="query.page"
-                :total-rows="count"
                 :per-page="query.size"
+                :total-rows="count"
                 @change="goToPage"
             />
           </div>
@@ -69,7 +69,7 @@ export default {
     get_list_after(json) {
       this.count_pages = Math.ceil(json.result.count / this.query.size);
     },
-    goToPage(v){
+    goToPage(v) {
       this.query.page = v;
       this.goToNew(v)
     }
@@ -83,6 +83,7 @@ export default {
   justify-content: center;
   align-items: center;
 }
+
 .ellipsis_2 {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -90,29 +91,34 @@ export default {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+
 .container {
   min-height: 800px;
 }
+
 .notice_block {
   display: flex;
   justify-content: space-between;
   padding: 10px;
   margin: 5px;
 }
+
 .notice_title {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-  .notice_list_title{
-    margin: 0 0.5rem;
-    background-color: #d2d2d2;
-    color: white;
-    display: flex;
-    height: 4rem;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 0.5rem;
-  }
+
+.notice_list_title {
+  margin: 0 0.5rem;
+  background-color: #d2d2d2;
+  color: white;
+  display: flex;
+  height: 4rem;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+}
+
 .title {
   font-size: 1.5rem;
   font-weight: bold;

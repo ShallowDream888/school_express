@@ -1,16 +1,14 @@
 package com.project.demo.dao;
 
-import java.util.List;
-
 import com.project.demo.dao.base.BaseMapper;
 import com.project.demo.entity.Comment;
 
+import java.util.List;
+
 /**
  * 评论：Mapper接口
- *
  */
-public interface CommentMapper extends BaseMapper<Comment>
-{
+public interface CommentMapper extends BaseMapper<Comment> {
     /**
      * 查询评论：
      *

@@ -1,21 +1,21 @@
 <template>
-  <div class="page_media" id="media_img">
+  <div id="media_img" class="page_media">
     <div class="container">
       <div class="row">
         <div class="col">
           <div class="download_box">
-            <a :href="$fullUrl(query.filename)" download class="download_btn">
-                <span>下载</span>
-                <b-icon icon="arrow-down-circle" class="icon_download"></b-icon>
+            <a :href="$fullUrl(query.filename)" class="download_btn" download>
+              <span>下载</span>
+              <b-icon class="icon_download" icon="arrow-down-circle"></b-icon>
             </a>
           </div>
-            <div class="img_show">
-              <img
+          <div class="img_show">
+            <img
                 id="image"
                 :src="$fullUrl(query.filename)"
                 @error="imgError"
-              />
-              </div>
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -24,6 +24,7 @@
 
 <script>
 import mixin from "@/mixins/page.js";
+
 export default {
   mixins: [mixin],
   data() {
@@ -62,6 +63,7 @@ export default {
   height: 600px;
   margin: auto;
 }
+
 #media_img .download_box {
   display: block;
   position: relative;
@@ -73,10 +75,12 @@ export default {
   margin: 1rem 0;
   cursor: pointer;
 }
+
 #media_img .download_box .download_btn {
   color: rgb(184, 51, 51);
   font-weight: bold;
 }
+
 #media_img .download_box .download_btn .icon_download {
   margin-left: 5px;
 }

@@ -1,16 +1,14 @@
 package com.project.demo.dao;
 
-import java.util.List;
-
 import com.project.demo.dao.base.BaseMapper;
 import com.project.demo.entity.Hits;
 
+import java.util.List;
+
 /**
  * 【请填写功能名称】Mapper接口
- *
  */
-public interface HitsMapper extends BaseMapper<Hits>
-{
+public interface HitsMapper extends BaseMapper<Hits> {
     /**
      * 查询【请填写功能名称】
      *

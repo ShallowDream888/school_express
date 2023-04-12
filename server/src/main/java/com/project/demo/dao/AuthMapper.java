@@ -7,10 +7,8 @@ import java.util.List;
 
 /**
  * 定制授权Mapper接口
- *
  */
-public interface AuthMapper extends BaseMapper<Auth>
-{
+public interface AuthMapper extends BaseMapper<Auth> {
     /**
      * 查询定制授权
      *

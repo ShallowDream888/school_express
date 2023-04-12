@@ -6,7 +6,7 @@ import java.util.Map;
 
 public interface BaseMapper<E> extends com.baomidou.mybatisplus.core.mapper.BaseMapper<E> {
 
-    List<Map<String,Object>> selectBaseList(String select);
+    List<Map<String, Object>> selectBaseList(String select);
 
     Integer selectBaseCount(String count);
 

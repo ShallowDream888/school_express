@@ -1,12 +1,12 @@
 <template>
   <div class="list_comment">
-    <div class="item_comment_box" v-for="(o, i) in list" :key="i">
+    <div v-for="(o, i) in list" :key="i" class="item_comment_box">
       <div class="comment">
         <div class="left_block">
           <img
-            style="width: 4rem; height: 4rem"
-            :src="$fullUrl(o[vm.avatar])"
-            v-default-img="'/img/default.png'"
+              v-default-img="'/img/default.png'"
+              :src="$fullUrl(o[vm.avatar])"
+              style="width: 4rem; height: 4rem"
           />
         </div>
         <div class="right_block">
@@ -18,14 +18,14 @@
               </div>
             </div>
           </div>
-          <div v-html="o[vm.content]" class="content"></div>
-          <div class="comment_reply" v-if="Object.keys(obj).length">
+          <div class="content" v-html="o[vm.content]"></div>
+          <div v-if="Object.keys(obj).length" class="comment_reply">
             <b-button variant="outline" @click="reply_to_sb(o)">回复</b-button>
           </div>
         </div>
       </div>
-      <div class="list_reply ml-5" v-if="o.list_reply">
-        <div class="mb" v-for="(obj, idx) in o.list_reply" :key="idx">
+      <div v-if="o.list_reply" class="list_reply ml-5">
+        <div v-for="(obj, idx) in o.list_reply" :key="idx" class="mb">
           <div class="fl"><span class="nickname">{{ obj[vm.nickname] }}</span></div>
           <div class="fr"><span class="time">{{ obj[vm.create_time] | formatDate }}</span></div>
           <div class="ml-5" v-html="obj[vm.content]"></div>
@@ -37,6 +37,7 @@
 
 <script>
 import mixin from "@/mixins/page.js";
+
 export default {
   mixins: [mixin],
   props: {
@@ -127,6 +128,7 @@ export default {
   float: left;
   font-size: 0.8rem;
 }
+
 .comment_reply {
   float: right;
 }

@@ -1,17 +1,15 @@
 package com.project.demo.dao;
 
-import java.util.List;
-
-import com.project.demo.entity.User;
 import com.project.demo.dao.base.BaseMapper;
+import com.project.demo.entity.User;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * 用户账户：用于保存用户登录信息Mapper接口
- *
  */
-public interface UserMapper extends BaseMapper<User>
-{
+public interface UserMapper extends BaseMapper<User> {
     /**
      * 查询用户账户：用于保存用户登录信息
      *

@@ -20,6 +20,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ *
  */
 @Slf4j
 public class BaseController<E, S extends BaseService<E>> {
@@ -35,13 +36,13 @@ public class BaseController<E, S extends BaseService<E>> {
     }
 
     @Transactional
-    public Map<String, Object> addMap(Map<String,Object> map){
+    public Map<String, Object> addMap(Map<String, Object> map) {
         service.insert(map);
         return success(1);
     }
 
     @PostMapping("/set")
-	@Transactional
+    @Transactional
     public Map<String, Object> set(HttpServletRequest request) throws IOException {
         service.update(service.readQuery(request), service.readConfig(request), service.readBody(request.getReader()));
         return success(1);
@@ -60,7 +61,7 @@ public class BaseController<E, S extends BaseService<E>> {
         List resultList = service.selectBaseList(service.select(service.readQuery(request), service.readConfig(request)));
         if (resultList.size() > 0) {
             JSONObject jsonObject = new JSONObject();
-            jsonObject.put("obj",resultList.get(0));
+            jsonObject.put("obj", resultList.get(0));
             return success(jsonObject);
         } else {
             return success(null);
@@ -76,9 +77,9 @@ public class BaseController<E, S extends BaseService<E>> {
 
     @RequestMapping("/list_group")
     public Map<String, Object> listGroup(HttpServletRequest request) {
-        Map<String,Object> map = service.selectToList(service.readQuery(request), service.readConfig(request));
-        Map<String,Object> result = new HashMap<>();
-        result.put("result",map);
+        Map<String, Object> map = service.selectToList(service.readQuery(request), service.readConfig(request));
+        Map<String, Object> result = new HashMap<>();
+        result.put("result", map);
         return result;
     }
 
@@ -90,7 +91,7 @@ public class BaseController<E, S extends BaseService<E>> {
 
     @RequestMapping(value = {"/count_group", "/count"})
     public Map<String, Object> count(HttpServletRequest request) {
-        Integer value= service.selectSqlToInteger(service.groupCount(service.readQuery(request), service.readConfig(request)));
+        Integer value = service.selectSqlToInteger(service.groupCount(service.readQuery(request), service.readConfig(request)));
         return success(value);
     }
 
@@ -126,14 +127,14 @@ public class BaseController<E, S extends BaseService<E>> {
 
 
     @PostMapping("/upload")
-    public Map<String, Object> upload(@RequestParam(value = "file",required=false) MultipartFile file,HttpServletRequest request) {
+    public Map<String, Object> upload(@RequestParam(value = "file", required = false) MultipartFile file, HttpServletRequest request) {
         log.info("进入方法");
         if (file.isEmpty()) {
             return error(30000, "没有选择文件");
         }
         try {
             //判断有没路径，没有则创建
-            String filePath = request.getSession().getServletContext().getRealPath("\\") +"\\upload\\";
+            String filePath = request.getSession().getServletContext().getRealPath("\\") + "\\upload\\";
 //            String filePath = System.getProperty("user.dir") + "\\target\\classes\\static\\upload\\";
             File targetDir = new File(filePath);
             if (!targetDir.exists() && !targetDir.isDirectory()) {
@@ -149,7 +150,7 @@ public class BaseController<E, S extends BaseService<E>> {
             int lastIndexOf = fileName.lastIndexOf(".");
             //获取文件的后缀名 .jpg
             String suffix = fileName.substring(lastIndexOf);
-            fileName = IdWorker.getId()+suffix;
+            fileName = IdWorker.getId() + suffix;
             File dest = new File(filePath + fileName);
             log.info("文件路径:{}", dest.getPath());
             log.info("文件名:{}", dest.getName());
@@ -187,9 +188,9 @@ public class BaseController<E, S extends BaseService<E>> {
         }
         if (o instanceof List) {
             if (((List) o).size() == 1) {
-               o =  ((List) o).get(0);
+                o = ((List) o).get(0);
                 map.put("result", o);
-            }else {
+            } else {
                 String jsonString = JSONObject.toJSONString(o);
                 JSONArray objects = service.covertArray(JSONObject.parseArray(jsonString));
                 map.put("result", objects);

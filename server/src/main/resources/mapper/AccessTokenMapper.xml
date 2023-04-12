@@ -1,28 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
-PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.project.demo.dao.AccessTokenMapper">
 
     <resultMap type="com.project.demo.entity.AccessToken" id="AccessTokenResult">
-        <result property="tokenId"    column="token_id"    />
-        <result property="token"    column="token"    />
-        <result property="maxage"    column="maxage"    />
-        <result property="createTime"    column="create_time"    />
-        <result property="updateTime"    column="update_time"    />
-        <result property="user_id"    column="user_id"    />
+        <result property="tokenId" column="token_id"/>
+        <result property="token" column="token"/>
+        <result property="maxage" column="maxage"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="user_id" column="user_id"/>
     </resultMap>
 
     <sql id="selectAccessTokenVo">
-        select token_id, token, maxage, create_time, update_time, user_id from access_token
+        select token_id, token, maxage, create_time, update_time, user_id
+        from access_token
     </sql>
 
-    <select id="selectAccessTokenList" parameterType="com.project.demo.entity.AccessToken" resultMap="AccessTokenResult">
+    <select id="selectAccessTokenList" parameterType="com.project.demo.entity.AccessToken"
+            resultMap="AccessTokenResult">
         <include refid="selectAccessTokenVo"/>
         <where>
-            <if test="token != null  and token != ''"> and token = #{token}</if>
-            <if test="maxage != null "> and maxage = #{maxage}</if>
-            <if test="userId != null "> and user_id = #{userId}</if>
+            <if test="token != null  and token != ''">and token = #{token}</if>
+            <if test="maxage != null ">and maxage = #{maxage}</if>
+            <if test="userId != null ">and user_id = #{userId}</if>
         </where>
     </select>
 
@@ -31,7 +33,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         where token_id = #{tokenId}
     </select>
 
-    <insert id="insertAccessToken" parameterType="com.project.demo.entity.AccessToken" useGeneratedKeys="true" keyProperty="tokenId">
+    <insert id="insertAccessToken" parameterType="com.project.demo.entity.AccessToken" useGeneratedKeys="true"
+            keyProperty="tokenId">
         insert into access_token
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="token != null  and token != ''">token,</if>
@@ -39,14 +42,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="createTime != null ">create_time,</if>
             <if test="updateTime != null ">update_time,</if>
             <if test="userId != null ">user_id,</if>
-         </trim>
+        </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="token != null  and token != ''">#{token},</if>
             <if test="maxage != null ">#{maxage},</if>
             <if test="createTime != null ">#{createTime},</if>
             <if test="updateTime != null ">#{updateTime},</if>
             <if test="userId != null ">#{userId},</if>
-         </trim>
+        </trim>
     </insert>
 
     <update id="updateAccessToken" parameterType="com.project.demo.entity.AccessToken">
@@ -62,7 +65,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     </update>
 
     <delete id="deleteAccessTokenById" parameterType="Integer">
-        delete from access_token where token_id = #{tokenId}
+        delete
+        from access_token
+        where token_id = #{tokenId}
     </delete>
 
     <delete id="deleteAccessTokenByIds" parameterType="String">

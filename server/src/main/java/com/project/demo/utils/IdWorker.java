@@ -28,13 +28,13 @@ import java.util.UUID;
  */
 public class IdWorker {
 
-    private IdWorker() {
-    }
-
     /**
      * 主机和进程的机器码
      */
     private static Sequence worker = new Sequence(0, 0);
+
+    private IdWorker() {
+    }
 
     public static long getId() {
         return worker.nextId();
@@ -42,6 +42,7 @@ public class IdWorker {
 
     /**
      * 由于js精度问题，只能处理到15位，所以一般情况下将其转换成字符串
+     *
      * @return
      */
     public static String getIdAsString() {

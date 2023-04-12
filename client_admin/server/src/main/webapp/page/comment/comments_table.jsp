@@ -24,14 +24,16 @@
                 <div>
                     <label class="layui-form-label">昵称</label>
                     <div class="layui-input-block block">
-                        <input type="text" name="title" required lay-verify="required" autocomplete="off" class="layui-input"
+                        <input type="text" name="title" required lay-verify="required" autocomplete="off"
+                               class="layui-input"
                                id="nickname">
                     </div>
                 </div>
                 <div>
                     <label class="layui-form-label">内容</label>
                     <div class="layui-input-block block">
-                        <input type="text" name="title" required lay-verify="required" autocomplete="off" class="layui-input" id="content">
+                        <input type="text" name="title" required lay-verify="required" autocomplete="off"
+                               class="layui-input" id="content">
                     </div>
                 </div>
             </div>
@@ -74,7 +76,7 @@
         util.event('lay-header-event', {
             //左侧菜单事件
             menuLeft: function (othis) {
-                layer.msg('展开左侧菜单的操作', { icon: 0 });
+                layer.msg('展开左侧菜单的操作', {icon: 0});
             }
             , menuRight: function () {
                 layer.open({
@@ -91,7 +93,7 @@
         //  table 事件
         table.render({
             elem: '#comments'
-            , url: BaseUrl+'/api/comment/get_list'
+            , url: BaseUrl + '/api/comment/get_list'
             , headers: {
                 'x-auth-token': token,
                 'Content-Type': 'application/json'
@@ -104,10 +106,16 @@
                 , last: false //不显示尾页
             }
             , cols: [[
-                { type: 'checkbox' }
-                , { field: 'nickname', width: '15%', title: '昵称' }
-                , { field: 'img', width: '15%', title: '头像', templet: "<div><img src=" + BaseUrl + '{{d.img}}' + "></div>" }
-                , { field: 'tag', width: '15%', title: '评论人' , templet:
+                {type: 'checkbox'}
+                , {field: 'nickname', width: '15%', title: '昵称'}
+                , {
+                    field: 'img',
+                    width: '15%',
+                    title: '头像',
+                    templet: "<div><img src=" + BaseUrl + '{{d.img}}' + "></div>"
+                }
+                , {
+                    field: 'tag', width: '15%', title: '评论人', templet:
 
                         function (d) {
                             let nickname = ""
@@ -129,10 +137,23 @@
                                 }
                             });
                             return '<span>' + nickname + '</span>'
-                        }}
-                , { field: 'create_time', width: '20%', title: '新增时间', sort: true, templet: "<div>{{layui.util.toDateString(d.create_time, 'yyyy-MM-dd HH:mm:ss')}}</div>" }
-                , { field: 'update_time', width: '20%', title: '更新时间', sort: true, templet: "<div>{{layui.util.toDateString(d.update_time, 'yyyy-MM-dd HH:mm:ss')}}</div>" }
-                , { field: 'operate', width: '15%', title: '操作', sort: true, fixed: 'right', toolbar: '#barDemo' }
+                        }
+                }
+                , {
+                    field: 'create_time',
+                    width: '20%',
+                    title: '新增时间',
+                    sort: true,
+                    templet: "<div>{{layui.util.toDateString(d.create_time, 'yyyy-MM-dd HH:mm:ss')}}</div>"
+                }
+                , {
+                    field: 'update_time',
+                    width: '20%',
+                    title: '更新时间',
+                    sort: true,
+                    templet: "<div>{{layui.util.toDateString(d.update_time, 'yyyy-MM-dd HH:mm:ss')}}</div>"
+                }
+                , {field: 'operate', width: '15%', title: '操作', sort: true, fixed: 'right', toolbar: '#barDemo'}
             ]]
             , page: true,
             request: {
@@ -154,7 +175,7 @@
                 like: 0,
                 size: 10,
                 page: 1,
-                reply_to_id:source_id
+                reply_to_id: source_id
             }
         });
         //监听行工具事件
@@ -165,13 +186,13 @@
             }
         });
         // 请求参数：
-        let request = { like: 0, size: 10, page: 1, nickname: '', content: '', orderby: 'create_time desc' }
+        let request = {like: 0, size: 10, page: 1, nickname: '', content: '', orderby: 'create_time desc'}
 
         // 重置/Reset参数
-        let resetName = { like: 0, size: 10, page: 1 }
+        let resetName = {like: 0, size: 10, page: 1}
 
 
-        fun('comments', BaseUrl+'/api/comment/del', 'comment_id', request, resetName)
+        fun('comments', BaseUrl + '/api/comment/del', 'comment_id', request, resetName)
     });
 </script>
 </body>

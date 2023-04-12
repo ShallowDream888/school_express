@@ -5,8 +5,7 @@ import com.project.demo.entity.Runner;
 
 /**
  * 跑腿用户：(Runner)Mapper接口
- *
  */
-public interface RunnerMapper extends BaseMapper<Runner>{
+public interface RunnerMapper extends BaseMapper<Runner> {
 
 }

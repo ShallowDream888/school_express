@@ -1,16 +1,14 @@
 package com.project.demo.dao;
 
-import java.util.List;
-
 import com.project.demo.dao.base.BaseMapper;
 import com.project.demo.entity.Notice;
 
+import java.util.List;
+
 /**
  * 公告：Mapper接口
- *
  */
-public interface NoticeMapper extends BaseMapper<Notice>
-{
+public interface NoticeMapper extends BaseMapper<Notice> {
     /**
      * 查询公告：
      *

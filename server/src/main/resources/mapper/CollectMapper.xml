@@ -1,34 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
-PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.project.demo.dao.CollectMapper">
 
     <resultMap type="com.project.demo.entity.Collect" id="CollectResult">
-        <result property="collectId"    column="collect_id"    />
-        <result property="userId"    column="user_id"    />
-        <result property="sourceTable"    column="source_table"    />
-        <result property="sourceField"    column="source_field"    />
-        <result property="sourceId"    column="source_id"    />
-        <result property="title"    column="title"    />
-        <result property="img"    column="img"    />
-        <result property="createTime"    column="create_time"    />
-        <result property="updateTime"    column="update_time"    />
+        <result property="collectId" column="collect_id"/>
+        <result property="userId" column="user_id"/>
+        <result property="sourceTable" column="source_table"/>
+        <result property="sourceField" column="source_field"/>
+        <result property="sourceId" column="source_id"/>
+        <result property="title" column="title"/>
+        <result property="img" column="img"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
     </resultMap>
 
     <sql id="selectCollectVo">
-        select collect_id, user_id, source_table, source_field, source_id, title, img, create_time, update_time from collect
+        select collect_id,
+               user_id,
+               source_table,
+               source_field,
+               source_id,
+               title,
+               img,
+               create_time,
+               update_time
+        from collect
     </sql>
 
     <select id="selectCollectList" parameterType="com.project.demo.entity.Collect" resultMap="CollectResult">
         <include refid="selectCollectVo"/>
         <where>
-            <if test="userId != null "> and user_id = #{userId}</if>
-            <if test="sourceTable != null  and sourceTable != ''"> and source_table = #{sourceTable}</if>
-            <if test="sourceField != null  and sourceField != ''"> and source_field = #{sourceField}</if>
-            <if test="sourceId != null "> and source_id = #{sourceId}</if>
-            <if test="title != null  and title != ''"> and title = #{title}</if>
-            <if test="img != null  and img != ''"> and img = #{img}</if>
+            <if test="userId != null ">and user_id = #{userId}</if>
+            <if test="sourceTable != null  and sourceTable != ''">and source_table = #{sourceTable}</if>
+            <if test="sourceField != null  and sourceField != ''">and source_field = #{sourceField}</if>
+            <if test="sourceId != null ">and source_id = #{sourceId}</if>
+            <if test="title != null  and title != ''">and title = #{title}</if>
+            <if test="img != null  and img != ''">and img = #{img}</if>
         </where>
     </select>
 
@@ -37,7 +46,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         where collect_id = #{collectId}
     </select>
 
-    <insert id="insertCollect" parameterType="com.project.demo.entity.Collect" useGeneratedKeys="true" keyProperty="collectId">
+    <insert id="insertCollect" parameterType="com.project.demo.entity.Collect" useGeneratedKeys="true"
+            keyProperty="collectId">
         insert into collect
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="userId != null ">user_id,</if>
@@ -48,7 +58,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="img != null  and img != ''">img,</if>
             <if test="createTime != null ">create_time,</if>
             <if test="updateTime != null ">update_time,</if>
-         </trim>
+        </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="userId != null ">#{userId},</if>
             <if test="sourceTable != null  and sourceTable != ''">#{sourceTable},</if>
@@ -58,7 +68,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="img != null  and img != ''">#{img},</if>
             <if test="createTime != null ">#{createTime},</if>
             <if test="updateTime != null ">#{updateTime},</if>
-         </trim>
+        </trim>
     </insert>
 
     <update id="updateCollect" parameterType="com.project.demo.entity.Collect">
@@ -77,7 +87,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     </update>
 
     <delete id="deleteCollectById" parameterType="Integer">
-        delete from collect where collect_id = #{collectId}
+        delete
+        from collect
+        where collect_id = #{collectId}
     </delete>
 
     <delete id="deleteCollectByIds" parameterType="String">

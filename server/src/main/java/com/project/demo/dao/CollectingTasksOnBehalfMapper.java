@@ -5,8 +5,7 @@ import com.project.demo.entity.CollectingTasksOnBehalf;
 
 /**
  * 代领任务：(CollectingTasksOnBehalf)Mapper接口
- *
  */
-public interface CollectingTasksOnBehalfMapper extends BaseMapper<CollectingTasksOnBehalf>{
+public interface CollectingTasksOnBehalfMapper extends BaseMapper<CollectingTasksOnBehalf> {
 
 }

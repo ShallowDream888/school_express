@@ -1,11 +1,11 @@
 package com.project.demo.entity;
 
-import com.alibaba.fastjson.annotation.JSONField;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import lombok.*;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
@@ -13,7 +13,6 @@ import java.sql.Timestamp;
 
 /**
  * 代领订单：(PickingOrder)表实体类
- *
  */
 @TableName("`picking_order`")
 @Data
@@ -65,8 +64,6 @@ public class PickingOrder implements Serializable {
     private String order_status;
 
 
-
-
     // 支付状态
     @TableField(value = "pay_state")
     private String pay_state;
@@ -76,10 +73,6 @@ public class PickingOrder implements Serializable {
     private String pay_type;
 
 
-
-
-
-
     // 更新时间
     @TableField(value = "update_time")
     private Timestamp update_time;
@@ -87,11 +80,6 @@ public class PickingOrder implements Serializable {
     // 创建时间
     @TableField(value = "create_time")
     private Timestamp create_time;
-
-
-
-
-
 
 
 }

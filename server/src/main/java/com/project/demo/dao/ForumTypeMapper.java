@@ -1,16 +1,14 @@
 package com.project.demo.dao;
 
-import java.util.List;
-
 import com.project.demo.dao.base.BaseMapper;
 import com.project.demo.entity.ForumType;
 
+import java.util.List;
+
 /**
  * 论坛频道：用于汇总浏览论坛，在不同频道下展示不同论坛。Mapper接口
- *
  */
-public interface ForumTypeMapper extends BaseMapper<ForumType>
-{
+public interface ForumTypeMapper extends BaseMapper<ForumType> {
     /**
      * 查询论坛频道：用于汇总浏览论坛，在不同频道下展示不同论坛。
      *

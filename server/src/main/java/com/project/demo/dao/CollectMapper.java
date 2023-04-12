@@ -1,16 +1,14 @@
 package com.project.demo.dao;
 
-import java.util.List;
-
 import com.project.demo.dao.base.BaseMapper;
 import com.project.demo.entity.Collect;
 
+import java.util.List;
+
 /**
  * 收藏：Mapper接口
- *
  */
-public interface CollectMapper extends BaseMapper<Collect>
-{
+public interface CollectMapper extends BaseMapper<Collect> {
     /**
      * 查询收藏：
      *

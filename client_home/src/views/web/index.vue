@@ -1,11 +1,11 @@
 <template>
-	<web-view class="page_web" id="web" :src="url"></web-view>
+  <web-view id="web" :src="url" class="page_web"></web-view>
 </template>
 
 <script>
-	export default {
-		url: "https://uniapp.dcloud.io/static/web-view.html"
-	}
+export default {
+  url: "https://uniapp.dcloud.io/static/web-view.html"
+}
 </script>
 
 <style>
