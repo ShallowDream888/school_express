@@ -7,10 +7,8 @@ import com.express.entity.Collect;
 
 /**
  * 收藏：Mapper接口
- *
  */
-public interface CollectMapper extends BaseMapper<Collect>
-{
+public interface CollectMapper extends BaseMapper<Collect> {
     /**
      * 查询收藏：
      *

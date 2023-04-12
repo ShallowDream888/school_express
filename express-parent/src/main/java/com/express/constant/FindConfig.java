@@ -1,6 +1,7 @@
 package com.express.constant;
 
 /**
+ *
  */
 public class FindConfig {
 

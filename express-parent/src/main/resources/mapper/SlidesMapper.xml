@@ -1,32 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
-PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.express.dao.SlidesMapper">
 
     <resultMap type="com.express.entity.Slides" id="SlidesResult">
-        <result property="slidesId"    column="slides_id"    />
-        <result property="title"    column="title"    />
-        <result property="content"    column="content"    />
-        <result property="url"    column="url"    />
-        <result property="img"    column="img"    />
-        <result property="hits"    column="hits"    />
-        <result property="createTime"    column="create_time"    />
-        <result property="updateTime"    column="update_time"    />
+        <result property="slidesId" column="slides_id"/>
+        <result property="title" column="title"/>
+        <result property="content" column="content"/>
+        <result property="url" column="url"/>
+        <result property="img" column="img"/>
+        <result property="hits" column="hits"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
     </resultMap>
 
     <sql id="selectSlidesVo">
-        select slides_id, title, content, url, img, hits, create_time, update_time from slides
+        select slides_id,
+               title,
+               content,
+               url,
+               img,
+               hits,
+               create_time,
+               update_time
+        from slides
     </sql>
 
     <select id="selectSlidesList" parameterType="com.express.entity.Slides" resultMap="SlidesResult">
         <include refid="selectSlidesVo"/>
         <where>
-            <if test="title != null  and title != ''"> and title = #{title}</if>
-            <if test="content != null  and content != ''"> and content = #{content}</if>
-            <if test="url != null  and url != ''"> and url = #{url}</if>
-            <if test="img != null  and img != ''"> and img = #{img}</if>
-            <if test="hits != null "> and hits = #{hits}</if>
+            <if test="title != null  and title != ''">and title = #{title}</if>
+            <if test="content != null  and content != ''">and content = #{content}</if>
+            <if test="url != null  and url != ''">and url = #{url}</if>
+            <if test="img != null  and img != ''">and img = #{img}</if>
+            <if test="hits != null ">and hits = #{hits}</if>
         </where>
     </select>
 
@@ -45,7 +53,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="hits != null ">hits,</if>
             <if test="createTime != null ">create_time,</if>
             <if test="updateTime != null ">update_time,</if>
-         </trim>
+        </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="title != null  and title != ''">#{title},</if>
             <if test="content != null  and content != ''">#{content},</if>
@@ -54,7 +62,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="hits != null ">#{hits},</if>
             <if test="createTime != null ">#{createTime},</if>
             <if test="updateTime != null ">#{updateTime},</if>
-         </trim>
+        </trim>
     </insert>
 
     <update id="updateSlides" parameterType="com.express.entity.Slides">
@@ -72,7 +80,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     </update>
 
     <delete id="deleteSlidesById" parameterType="Integer">
-        delete from slides where slides_id = #{slidesId}
+        delete
+        from slides
+        where slides_id = #{slidesId}
     </delete>
 
     <delete id="deleteSlidesByIds" parameterType="String">

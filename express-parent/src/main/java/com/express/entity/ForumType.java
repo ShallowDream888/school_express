@@ -15,7 +15,7 @@ import java.sql.Timestamp;
  * 论坛频道：用于汇总浏览论坛，在不同频道下展示不同论坛。(ForumType)表实体类
  *
  * @author xxx
- *@since 202X-XX-XX
+ * @since 202X-XX-XX
  */
 @TableName("forum_type")
 @Data

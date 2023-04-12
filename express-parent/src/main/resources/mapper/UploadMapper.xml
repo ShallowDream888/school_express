@@ -1,34 +1,42 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
-PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.express.dao.UploadMapper">
 
     <resultMap type="com.express.entity.Upload" id="UploadResult">
-        <result property="uploadId"    column="upload_id"    />
-        <result property="name"    column="name"    />
-        <result property="path"    column="path"    />
-        <result property="file"    column="file"    />
-        <result property="display"    column="display"    />
-        <result property="fatherId"    column="father_id"    />
-        <result property="dir"    column="dir"    />
-        <result property="type"    column="type"    />
+        <result property="uploadId" column="upload_id"/>
+        <result property="name" column="name"/>
+        <result property="path" column="path"/>
+        <result property="file" column="file"/>
+        <result property="display" column="display"/>
+        <result property="fatherId" column="father_id"/>
+        <result property="dir" column="dir"/>
+        <result property="type" column="type"/>
     </resultMap>
 
     <sql id="selectUploadVo">
-        select upload_id, name, path, file, display, father_id, dir, type from upload
+        select upload_id,
+               name,
+               path,
+               file,
+               display,
+               father_id,
+               dir,
+               type
+        from upload
     </sql>
 
     <select id="selectUploadList" parameterType="com.express.entity.Upload" resultMap="UploadResult">
         <include refid="selectUploadVo"/>
         <where>
-            <if test="name != null  and name != ''"> and name like concat('%', #{name}, '%')</if>
-            <if test="path != null  and path != ''"> and path = #{path}</if>
-            <if test="file != null  and file != ''"> and file = #{file}</if>
-            <if test="display != null  and display != ''"> and display = #{display}</if>
-            <if test="fatherId != null "> and father_id = #{fatherId}</if>
-            <if test="dir != null  and dir != ''"> and dir = #{dir}</if>
-            <if test="type != null  and type != ''"> and type = #{type}</if>
+            <if test="name != null  and name != ''">and name like concat('%', #{name}, '%')</if>
+            <if test="path != null  and path != ''">and path = #{path}</if>
+            <if test="file != null  and file != ''">and file = #{file}</if>
+            <if test="display != null  and display != ''">and display = #{display}</if>
+            <if test="fatherId != null ">and father_id = #{fatherId}</if>
+            <if test="dir != null  and dir != ''">and dir = #{dir}</if>
+            <if test="type != null  and type != ''">and type = #{type}</if>
         </where>
     </select>
 
@@ -47,7 +55,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="fatherId != null ">father_id,</if>
             <if test="dir != null  and dir != ''">dir,</if>
             <if test="type != null  and type != ''">type,</if>
-         </trim>
+        </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="name != null  and name != ''">#{name},</if>
             <if test="path != null  and path != ''">#{path},</if>
@@ -56,7 +64,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="fatherId != null ">#{fatherId},</if>
             <if test="dir != null  and dir != ''">#{dir},</if>
             <if test="type != null  and type != ''">#{type},</if>
-         </trim>
+        </trim>
     </insert>
 
     <update id="updateUpload" parameterType="com.express.entity.Upload">
@@ -74,7 +82,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     </update>
 
     <delete id="deleteUploadById" parameterType="Long">
-        delete from upload where upload_id = #{uploadId}
+        delete
+        from upload
+        where upload_id = #{uploadId}
     </delete>
 
     <delete id="deleteUploadByIds" parameterType="String">

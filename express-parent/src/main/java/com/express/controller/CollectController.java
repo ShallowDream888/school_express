@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 收藏：(Collect)表控制层
- *
  */
 @RestController
 @RequestMapping("collect")

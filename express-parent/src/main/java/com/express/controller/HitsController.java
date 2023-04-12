@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 点赞：(Hits)表控制层
- *
  */
 @RestController
 @RequestMapping("hits")

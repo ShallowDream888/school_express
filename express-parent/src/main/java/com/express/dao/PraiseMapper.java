@@ -7,10 +7,8 @@ import com.express.entity.Praise;
 
 /**
  * 点赞：Mapper接口
- *
  */
-public interface PraiseMapper extends BaseMapper<Praise>
-{
+public interface PraiseMapper extends BaseMapper<Praise> {
     /**
      * 查询点赞：
      *

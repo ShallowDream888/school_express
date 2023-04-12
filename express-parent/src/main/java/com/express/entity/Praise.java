@@ -15,7 +15,7 @@ import java.sql.Timestamp;
  * 点赞：(Praise)表实体类
  *
  * @author xxx
- *@since 202X-XX-XX
+ * @since 202X-XX-XX
  */
 @TableName("praise")
 @Data

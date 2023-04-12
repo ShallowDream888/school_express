@@ -15,7 +15,7 @@ import java.sql.Timestamp;
  * 文章：用于内容管理系统的文章(Article)表实体类
  *
  * @author xxx
- *@since 202X-XX-XX
+ * @since 202X-XX-XX
  */
 @TableName("article")
 @Data

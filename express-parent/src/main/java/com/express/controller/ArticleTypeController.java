@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 文章频道：用于汇总浏览文章，在不同频道下展示不同文章。(ArticleType)表控制层
- *
  */
 @RestController
 @RequestMapping("article_type")

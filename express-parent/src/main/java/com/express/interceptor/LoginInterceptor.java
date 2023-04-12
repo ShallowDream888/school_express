@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
+ *
  */
 @Slf4j
 public class LoginInterceptor implements HandlerInterceptor {
@@ -22,14 +23,12 @@ public class LoginInterceptor implements HandlerInterceptor {
         String token = request.getHeader(this.tokenName);
 
         setHeader(request, response);
-        log.info("[请求接口] - {} , [请求类型] - {}",request.getRequestURL().toString(),request.getMethod());
-        if (request.getRequestURL().toString().contains("/api/user/login")){
+        log.info("[请求接口] - {} , [请求类型] - {}", request.getRequestURL().toString(), request.getMethod());
+        if (request.getRequestURL().toString().contains("/api/user/login")) {
             return true;
-        }
-        else if (request.getRequestURL().toString().contains("/api/user/state")){
+        } else if (request.getRequestURL().toString().contains("/api/user/state")) {
             return true;
-        }
-        else if (request.getRequestURL().toString().contains("/api/user/register")){
+        } else if (request.getRequestURL().toString().contains("/api/user/register")) {
             return true;
         }
 //        if (token == null || "".equals(token)){
@@ -39,7 +38,7 @@ public class LoginInterceptor implements HandlerInterceptor {
 //                return true;
 //            }
 //        }else {
-            return true;
+        return true;
 //        }
     }
 

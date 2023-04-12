@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
-PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.express.dao.NoticeMapper">
 
     <resultMap type="com.express.entity.Notice" id="NoticeResult">
-        <result property="noticeId"    column="notice_id"    />
-        <result property="title"    column="title"    />
-        <result property="content"    column="content"    />
-        <result property="createTime"    column="create_time"    />
-        <result property="updateTime"    column="update_time"    />
+        <result property="noticeId" column="notice_id"/>
+        <result property="title" column="title"/>
+        <result property="content" column="content"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
     </resultMap>
 
     <sql id="selectNoticeVo">
-        select notice_id, title, content, create_time, update_time from notice
+        select notice_id, title, content, create_time, update_time
+        from notice
     </sql>
 
     <select id="selectNoticeList" parameterType="com.express.entity.Notice" resultMap="NoticeResult">
         <include refid="selectNoticeVo"/>
         <where>
-            <if test="title != null  and title != ''"> and title = #{title}</if>
-            <if test="content != null  and content != ''"> and content = #{content}</if>
+            <if test="title != null  and title != ''">and title = #{title}</if>
+            <if test="content != null  and content != ''">and content = #{content}</if>
         </where>
     </select>
 
@@ -36,13 +37,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="content != null  and content != ''">content,</if>
             <if test="createTime != null ">create_time,</if>
             <if test="updateTime != null ">update_time,</if>
-         </trim>
+        </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="title != null  and title != ''">#{title},</if>
             <if test="content != null  and content != ''">#{content},</if>
             <if test="createTime != null ">#{createTime},</if>
             <if test="updateTime != null ">#{updateTime},</if>
-         </trim>
+        </trim>
     </insert>
 
     <update id="updateNotice" parameterType="com.express.entity.Notice">
@@ -57,7 +58,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     </update>
 
     <delete id="deleteNoticeById" parameterType="Integer">
-        delete from notice where notice_id = #{noticeId}
+        delete
+        from notice
+        where notice_id = #{noticeId}
     </delete>
 
     <delete id="deleteNoticeByIds" parameterType="String">

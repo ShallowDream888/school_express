@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * (Upload)表控制层
- *
  */
 @RestController
 @RequestMapping("upload")

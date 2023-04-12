@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+
 import java.io.Serializable;
 import java.sql.Timestamp;
 
@@ -15,7 +16,7 @@ import java.sql.Timestamp;
  * 访问：(Hits)表实体类
  *
  * @author xxx
- *@since 202X-XX-XX
+ * @since 202X-XX-XX
  */
 @TableName("hits")
 @Data

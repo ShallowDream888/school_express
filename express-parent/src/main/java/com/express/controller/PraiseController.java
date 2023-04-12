@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 点赞：(Praise)表控制层
- *
  */
 @RestController
 @RequestMapping("praise")

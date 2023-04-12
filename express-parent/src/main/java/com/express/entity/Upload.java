@@ -14,7 +14,7 @@ import java.io.Serializable;
  * (Upload)表实体类
  *
  * @author xxx
- *@since 202X-XX-XX
+ * @since 202X-XX-XX
  */
 @TableName("upload")
 @Data

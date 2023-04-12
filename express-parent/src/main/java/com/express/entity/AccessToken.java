@@ -13,7 +13,6 @@ import java.sql.Timestamp;
 
 /**
  * 临时访问牌(AccessToken)表实体类
- *
  */
 @TableName("access_token")
 @Data

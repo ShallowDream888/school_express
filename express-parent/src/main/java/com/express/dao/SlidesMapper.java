@@ -7,10 +7,8 @@ import com.express.entity.Slides;
 
 /**
  * 轮播图：Mapper接口
- *
  */
-public interface SlidesMapper extends BaseMapper<Slides>
-{
+public interface SlidesMapper extends BaseMapper<Slides> {
     /**
      * 查询轮播图：
      *

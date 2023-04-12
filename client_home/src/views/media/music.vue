@@ -1,17 +1,17 @@
 <template>
-  <div class="page_media" id="media_music">
+  <div id="media_music" class="page_media">
     <div class="container">
       <div class="row">
         <div class="col">
           <div class="page-section page-section-gap" style="text-align: center">
             <audio
-              style="text-align: left"
-              :src="$fullUrl(query.filename)"
-              :poster="current.poster"
-              :name="current.name"
-              :author="current.author"
-              :action="audioAction"
-              controls
+                :action="audioAction"
+                :author="current.author"
+                :name="current.name"
+                :poster="current.poster"
+                :src="$fullUrl(query.filename)"
+                controls
+                style="text-align: left"
             ></audio>
           </div>
         </div>
@@ -22,25 +22,26 @@
 
 <script>
 import mixin from "@/mixins/page.js";
+
 export default {
-	mixins: [mixin],
+  mixins: [mixin],
   data() {
     return {
       current: {
         poster:
-          "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-uni-app-doc/7fbf26a0-4f4a-11eb-b680-7980c8a877b8.png",
+            "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-uni-app-doc/7fbf26a0-4f4a-11eb-b680-7980c8a877b8.png",
         name: "致爱丽丝",
         author: "暂无",
         // src:
-		// "/static/upload/movie.mp4"
+        // "/static/upload/movie.mp4"
         //   "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-hello-uniapp/2cc220e0-c27a-11ea-9dfb-6da8e309e0d8.mp3",
       },
       audioAction: {
         method: "pause",
       },
-	  query:{
-		  filename:"/static/upload/movie.mp4",
-	  },
+      query: {
+        filename: "/static/upload/movie.mp4",
+      },
     };
   },
   methods: {},
@@ -48,9 +49,10 @@ export default {
 </script>
 
 <style scoped>
-.container{
-	min-height: 750px;
+.container {
+  min-height: 750px;
 }
+
 #media_music {
   display: flex;
   justify-content: space-between;

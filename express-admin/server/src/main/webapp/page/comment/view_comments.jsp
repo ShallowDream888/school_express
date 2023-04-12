@@ -24,14 +24,16 @@
                 <div>
                     <label class="layui-form-label">昵称</label>
                     <div class="layui-input-block block">
-                        <input type="text" name="title" required lay-verify="required" autocomplete="off" class="layui-input"
+                        <input type="text" name="title" required lay-verify="required" autocomplete="off"
+                               class="layui-input"
                                id="nickname">
                     </div>
                 </div>
                 <div>
                     <label class="layui-form-label">内容</label>
                     <div class="layui-input-block block">
-                        <input type="text" name="title" required lay-verify="required" autocomplete="off" class="layui-input" id="content">
+                        <input type="text" name="title" required lay-verify="required" autocomplete="off"
+                               class="layui-input" id="content">
                     </div>
                 </div>
             </div>
@@ -187,13 +189,13 @@
         });
 
         // 请求参数：
-        let request = { like: 0, size: 10, page: 1, nickname: '', content: '', orderby: 'create_time desc' }
+        let request = {like: 0, size: 10, page: 1, nickname: '', content: '', orderby: 'create_time desc'}
 
         // 重置/Reset参数
-        let resetName = { like: 0, size: 10, page: 1 }
+        let resetName = {like: 0, size: 10, page: 1}
 
 
-        fun('comments', BaseUrl+'/api/comment/del', 'comment_id', request, resetName)
+        fun('comments', BaseUrl + '/api/comment/del', 'comment_id', request, resetName)
     });
 </script>
 </body>

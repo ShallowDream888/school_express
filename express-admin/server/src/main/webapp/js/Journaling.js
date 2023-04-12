@@ -1,6 +1,6 @@
-
-window.onload = function(){
+window.onload = function () {
     var _iframe = document.getElementById('demoAdmin').contentWindow;
+
     function log_mod() {
         setInterval(() => {
             var timeOne = new Date();
@@ -34,20 +34,20 @@ window.onload = function(){
 
 
             }
+
             //获取所有模块标签元素
-            function getAllElements(selector,selectorto) {
-                if (selector){
+            function getAllElements(selector, selectorto) {
+                if (selector) {
                     return document.querySelectorAll(selector);
-                }else {
+                } else {
                     return document.querySelectorAll(selectorto);
                 }
 
             }
 
             //拿到a标签
-            let a_l = getAllElements("a[target='main_self_frame']","a[href$=html]" )
+            let a_l = getAllElements("a[target='main_self_frame']", "a[href$=html]")
             // console.log(a_l[12].href);
-
 
 
             //遍历a标签
@@ -86,10 +86,10 @@ window.onload = function(){
             }
 
 
-
         }
 
     }
+
     log_mod()
 
 }

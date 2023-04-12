@@ -13,7 +13,6 @@ import java.sql.Timestamp;
 
 /**
  * 跑腿用户：(Runner)表实体类
- *
  */
 @TableName("`runner`")
 @Data
@@ -44,15 +43,9 @@ public class Runner implements Serializable {
     private String dormitory;
 
 
-
-
-
-
-
     // 用户编号
     @TableField(value = "user_id")
     private Integer userId;
-
 
 
     // 更新时间
@@ -62,11 +55,6 @@ public class Runner implements Serializable {
     // 创建时间
     @TableField(value = "create_time")
     private Timestamp create_time;
-
-
-
-
-
 
 
 }

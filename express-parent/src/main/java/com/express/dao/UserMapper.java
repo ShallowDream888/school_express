@@ -8,10 +8,8 @@ import org.apache.ibatis.annotations.Param;
 
 /**
  * 用户账户：用于保存用户登录信息Mapper接口
- *
  */
-public interface UserMapper extends BaseMapper<User>
-{
+public interface UserMapper extends BaseMapper<User> {
     /**
      * 查询用户账户：用于保存用户登录信息
      *

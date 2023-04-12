@@ -16,15 +16,16 @@
 
 <script>
 import mixin from "@/mixins/component.js";
+
 export default {
   mixins: [mixin],
   components: {},
   data() {
-    return {
-    };
+    return {};
   },
   methods: {},
-  created() {},
+  created() {
+  },
 };
 </script>
 
@@ -34,8 +35,9 @@ export default {
   background-color: #000;
   color: white;
 }
+
 .card_copyright {
-	padding: 30px 10px;
+  padding: 30px 10px;
   text-align: center;
 }
 </style>

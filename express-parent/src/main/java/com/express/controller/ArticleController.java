@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 文章：用于内容管理系统的文章(Article)表控制层
- *
  */
 @RestController
 @RequestMapping("article")

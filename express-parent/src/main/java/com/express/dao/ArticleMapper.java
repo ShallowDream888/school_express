@@ -7,10 +7,8 @@ import java.util.List;
 
 /**
  * 文章：用于内容管理系统的文章Mapper接口
- *
  */
-public interface ArticleMapper extends BaseMapper<Article>
-{
+public interface ArticleMapper extends BaseMapper<Article> {
     /**
      * 查询文章：用于内容管理系统的文章
      *

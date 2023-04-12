@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 
 /**
  * 论坛：(Forum)表服务接口
- *
  */
 @Service
 public class ForumService extends BaseService<Forum> {

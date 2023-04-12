@@ -6958,7 +6958,7 @@ layui.define(["layer", "form"], function (t) {
                     o.render({
                         url: r.url, method: r.type, elem: e(n).find("input")[0], done: function (e) {
                             e ? (e.data = e.data || {}, v.call(t, "img", {
-                                src: fullUrl(BaseUrl,e.result.url),
+                                src: fullUrl(BaseUrl, e.result.url),
                                 alt: e.data.title
                             }, a)) : i.msg(e.msg || "\u4e0a\u4f20\u5931\u8d25")
                         }

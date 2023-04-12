@@ -7,10 +7,8 @@ import com.express.entity.Notice;
 
 /**
  * 公告：Mapper接口
- *
  */
-public interface NoticeMapper extends BaseMapper<Notice>
-{
+public interface NoticeMapper extends BaseMapper<Notice> {
     /**
      * 查询公告：
      *

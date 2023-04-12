@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 定制授权(Auth)表控制层
- *
  */
 @RestController
 @RequestMapping("auth")

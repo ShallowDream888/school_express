@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 评论：(Comment)表控制层
- *
  */
 @RestController
 @RequestMapping("comment")

@@ -1,5 +1,5 @@
 <template>
-  <div class="page_user" id="user_collect">
+  <div id="user_collect" class="page_user">
     <div class="warp">
       <div class="container">
         <div class="row justify-content-between">
@@ -29,6 +29,7 @@
 import mixin from "@/mixins/page.js";
 import list_menu_user from "@/components/diy/list_menu_user.vue";
 import list_collect from "@/components/diy/list_collect.vue";
+
 export default {
   mixins: [mixin],
   data() {
@@ -103,19 +104,23 @@ export default {
 .container {
   min-height: 800px;
 }
+
 .filter_block {
   display: flex;
   flex-direction: row;
   justify-content: start;
   padding: 10px;
 }
+
 .bar_filter {
   display: flex;
   align-items: center;
 }
+
 li {
   list-style: none;
 }
+
 .bar_sort {
   margin-left: 5px;
 }

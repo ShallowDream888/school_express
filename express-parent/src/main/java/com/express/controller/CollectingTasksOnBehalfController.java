@@ -15,7 +15,6 @@ import java.util.Map;
 
 /**
  * 代领任务：(CollectingTasksOnBehalf)表控制层
- *
  */
 @RestController
 @RequestMapping("/collecting_tasks_on_behalf")
@@ -33,7 +32,7 @@ public class CollectingTasksOnBehalfController extends BaseController<Collecting
     @PostMapping("/add")
     @Transactional
     public Map<String, Object> add(HttpServletRequest request) throws IOException {
-        Map<String,Object> paramMap = service.readBody(request.getReader());
+        Map<String, Object> paramMap = service.readBody(request.getReader());
         this.addMap(paramMap);
         return success(1);
     }

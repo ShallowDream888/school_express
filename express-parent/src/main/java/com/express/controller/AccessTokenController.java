@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 临时访问牌(AccessToken)表控制层
- *
  */
 @RestController
 @RequestMapping("access_token")

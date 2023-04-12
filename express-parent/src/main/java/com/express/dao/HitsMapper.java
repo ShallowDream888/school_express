@@ -7,10 +7,8 @@ import com.express.entity.Hits;
 
 /**
  * 【请填写功能名称】Mapper接口
- *
  */
-public interface HitsMapper extends BaseMapper<Hits>
-{
+public interface HitsMapper extends BaseMapper<Hits> {
     /**
      * 查询【请填写功能名称】
      *

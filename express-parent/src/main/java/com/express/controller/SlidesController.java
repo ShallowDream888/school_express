@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 轮播图：(Slides)表控制层
- *
  */
 @RestController
 @RequestMapping("slides")

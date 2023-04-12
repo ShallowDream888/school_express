@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 论坛：(Forum)表控制层
- *
  */
 @RestController
 @RequestMapping("forum")

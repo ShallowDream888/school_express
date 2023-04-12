@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
-PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.express.dao.HitsMapper">
 
     <resultMap type="com.express.entity.Hits" id="HitsResult">
-        <result property="hitsId"    column="hits_id"    />
-        <result property="userId"    column="user_id"    />
-        <result property="createTime"    column="create_time"    />
-        <result property="updateTime"    column="update_time"    />
-        <result property="sourceTable"    column="source_table"    />
-        <result property="sourceField"    column="source_field"    />
-        <result property="sourceId"    column="source_id"    />
+        <result property="hitsId" column="hits_id"/>
+        <result property="userId" column="user_id"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="sourceTable" column="source_table"/>
+        <result property="sourceField" column="source_field"/>
+        <result property="sourceId" column="source_id"/>
     </resultMap>
 
     <sql id="selectHitsVo">
-        select hits_id, user_id, create_time, update_time, source_table, source_field, source_id from hits
+        select hits_id, user_id, create_time, update_time, source_table, source_field, source_id
+        from hits
     </sql>
 
     <select id="selectHitsList" parameterType="com.express.entity.Hits" resultMap="HitsResult">
         <include refid="selectHitsVo"/>
         <where>
-            <if test="userId != null "> and user_id = #{userId}</if>
-            <if test="sourceTable != null  and sourceTable != ''"> and source_table = #{sourceTable}</if>
-            <if test="sourceField != null  and sourceField != ''"> and source_field = #{sourceField}</if>
-            <if test="sourceId != null "> and source_id = #{sourceId}</if>
+            <if test="userId != null ">and user_id = #{userId}</if>
+            <if test="sourceTable != null  and sourceTable != ''">and source_table = #{sourceTable}</if>
+            <if test="sourceField != null  and sourceField != ''">and source_field = #{sourceField}</if>
+            <if test="sourceId != null ">and source_id = #{sourceId}</if>
         </where>
     </select>
 
@@ -42,7 +43,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="sourceTable != null  and sourceTable != ''">source_table,</if>
             <if test="sourceField != null  and sourceField != ''">source_field,</if>
             <if test="sourceId != null ">source_id,</if>
-         </trim>
+        </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="userId != null ">#{userId},</if>
             <if test="createTime != null ">#{createTime},</if>
@@ -50,7 +51,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="sourceTable != null  and sourceTable != ''">#{sourceTable},</if>
             <if test="sourceField != null  and sourceField != ''">#{sourceField},</if>
             <if test="sourceId != null ">#{sourceId},</if>
-         </trim>
+        </trim>
     </insert>
 
     <update id="updateHits" parameterType="com.express.entity.Hits">
@@ -67,7 +68,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     </update>
 
     <delete id="deleteHitsById" parameterType="Integer">
-        delete from hits where hits_id = #{hitsId}
+        delete
+        from hits
+        where hits_id = #{hitsId}
     </delete>
 
     <delete id="deleteHitsByIds" parameterType="String">

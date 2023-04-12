@@ -13,7 +13,6 @@ import java.sql.Timestamp;
 
 /**
  * 代领任务：(CollectingTasksOnBehalf)表实体类
- *
  */
 @TableName("`collecting_tasks_on_behalf`")
 @Data
@@ -64,12 +63,6 @@ public class CollectingTasksOnBehalf implements Serializable {
     private Integer praise_len;
 
 
-
-
-
-
-
-
     // 更新时间
     @TableField(value = "update_time")
     private Timestamp update_time;
@@ -77,11 +70,6 @@ public class CollectingTasksOnBehalf implements Serializable {
     // 创建时间
     @TableField(value = "create_time")
     private Timestamp create_time;
-
-
-
-
-
 
 
 }

@@ -7,10 +7,8 @@ import com.express.entity.Forum;
 
 /**
  * 论坛：Mapper接口
- *
  */
-interface ForumMapper extends BaseMapper<Forum>
-{
+interface ForumMapper extends BaseMapper<Forum> {
     /**
      * 查询论坛：
      *

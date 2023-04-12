@@ -7,10 +7,8 @@ import com.express.entity.UserGroup;
 
 /**
  * 用户组：用于用户前端身份和鉴权Mapper接口
- *
  */
-public interface UserGroupMapper extends BaseMapper<UserGroup>
-{
+public interface UserGroupMapper extends BaseMapper<UserGroup> {
     /**
      * 查询用户组：用于用户前端身份和鉴权
      *

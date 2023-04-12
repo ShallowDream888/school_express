@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 用户组：用于用户前端身份和鉴权(UserGroup)表控制层
- *
  */
 @RestController
 @RequestMapping("user_group")

@@ -6,11 +6,11 @@ import web from './web.js'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-	state: {},
-	mutations: {},
-	actions: {},
-	modules: {
-		user,
-		web
-	}
+    state: {},
+    mutations: {},
+    actions: {},
+    modules: {
+        user,
+        web
+    }
 })

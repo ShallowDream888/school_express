@@ -7,10 +7,8 @@ import com.express.entity.Comment;
 
 /**
  * 评论：Mapper接口
- *
  */
-public interface CommentMapper extends BaseMapper<Comment>
-{
+public interface CommentMapper extends BaseMapper<Comment> {
     /**
      * 查询评论：
      *

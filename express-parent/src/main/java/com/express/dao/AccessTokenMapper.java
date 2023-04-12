@@ -7,10 +7,8 @@ import com.express.entity.AccessToken;
 
 /**
  * 临时访问牌Mapper接口
- *
  */
-public interface AccessTokenMapper extends BaseMapper<AccessToken>
-{
+public interface AccessTokenMapper extends BaseMapper<AccessToken> {
     /**
      * 查询临时访问牌
      *

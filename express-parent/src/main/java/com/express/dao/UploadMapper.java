@@ -7,10 +7,8 @@ import com.express.entity.Upload;
 
 /**
  * 【请填写功能名称】Mapper接口
- *
  */
-public interface UploadMapper extends BaseMapper<Upload>
-{
+public interface UploadMapper extends BaseMapper<Upload> {
     /**
      * 查询【请填写功能名称】
      *

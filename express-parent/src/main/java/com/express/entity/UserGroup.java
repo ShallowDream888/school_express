@@ -15,7 +15,7 @@ import java.sql.Timestamp;
  * 用户组：用于用户前端身份和鉴权(UserGroup)表实体类
  *
  * @author xxx
- *@since 202X-XX-XX
+ * @since 202X-XX-XX
  */
 @TableName("user_group")
 @Data
