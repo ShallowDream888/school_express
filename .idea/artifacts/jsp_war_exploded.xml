@@ -1,17 +1,17 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="project-jsp:war exploded">
-    <output-path>$PROJECT_DIR$/client_admin/server/target/project-jsp</output-path>
+  <artifact type="exploded-war" name="jsp:war exploded">
+    <output-path>$PROJECT_DIR$/express-admin/server/target/project-jsp</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
-        <module>project-jsp</module>
+        <module>jsp</module>
         <packaging>war</packaging>
       </options>
     </properties>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="project-jsp" />
+          <element id="module-output" name="jsp" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.47" />
@@ -37,9 +37,9 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/client_admin/server/target/project-jsp/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/express-admin/server/target/project-jsp/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="project-jsp/web/Web" />
+      <element id="javaee-facet-resources" facet="jsp/web/Web" />
     </root>
   </artifact>
 </component>

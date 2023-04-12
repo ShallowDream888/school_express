@@ -5,11 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.express</groupId>
-  <artifactId>project-jsp</artifactId>
+  <artifactId>jsp</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>project-jsp</name>
+  <name>jsp</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -115,7 +115,7 @@
   </dependencies>
 
   <build>
-    <finalName>project-jsp</finalName>
+    <finalName>jsp</finalName>
       <plugins>
           <plugin>
               <groupId>org.eclipse.jetty</groupId>
