@@ -81,5 +81,6 @@ public class PickingOrder implements Serializable {
     @TableField(value = "create_time")
     private Timestamp create_time;
 
-
+    @TableField(value = "user_phone")
+    private String user_phone;
 }

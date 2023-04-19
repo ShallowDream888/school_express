@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="ssm:war exploded">
-    <output-path>$PROJECT_DIR$/express-parent/target/project-ssm</output-path>
+    <output-path>$PROJECT_DIR$/express-parent/target/ssm</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
@@ -63,7 +63,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/express-parent/target/project-ssm/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/express-parent/target/ssm/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="ssm/web/Web" />
     </root>

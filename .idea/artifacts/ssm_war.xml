@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="project-ssm.war">
+    <root id="archive" name="ssm.war">
       <element id="artifact" artifact-name="ssm:war exploded" />
     </root>
   </artifact>

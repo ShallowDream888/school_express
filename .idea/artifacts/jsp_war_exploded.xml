@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="jsp:war exploded">
-    <output-path>$PROJECT_DIR$/express-admin/server/target/project-jsp</output-path>
+    <output-path>$PROJECT_DIR$/express-admin/server/target/jsp</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
@@ -37,7 +37,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/express-admin/server/target/project-jsp/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/express-admin/server/target/jsp/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="jsp/web/Web" />
     </root>

@@ -1591,11 +1591,7 @@ ol.list li::before {
     }
 }
 
-@media (min-width: 576px and min-width:
-
-992px
-
-) {
+@media (min-width: 576px and min-width:992px) {
     .show_pad {
         display: block !important;
     }
