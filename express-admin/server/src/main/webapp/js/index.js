@@ -85,7 +85,7 @@ function fun(id, url, parameter, obj, reset2, resetSelect, goods, goods_a, is_us
                     layer.confirm(
                         "此操作将永远删除/Del该文件，是否继续",
                         {
-                            btn: ["确定", "取消/Cancel"], //按钮
+                            btn: ["确定", "取消"], //按钮
                         },
                         async function () {
                             for (let i = 0; i < checkStatus.length; i++) {

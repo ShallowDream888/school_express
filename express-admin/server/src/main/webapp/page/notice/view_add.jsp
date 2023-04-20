@@ -34,9 +34,9 @@
                     </div>
                 </form>
                 <div class="layui-btn-container">
-                    <button type="button" class="layui-btn layui-btn-normal" id="submit">确认/Confirm</button>
+                    <button type="button" class="layui-btn layui-btn-normal" id="submit">确认</button>
                     <a href="./table.jsp" type="button" class="layui-btn layui-btn-normal"
-                       target="main_self_frame">取消/Cancel</a>
+                       target="main_self_frame">取消</a>
                 </div>
             </div>
         </div>

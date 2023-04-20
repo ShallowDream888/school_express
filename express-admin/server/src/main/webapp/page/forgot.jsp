@@ -98,8 +98,8 @@
                     </div>
                 </form>
                 <div class="layui-btn-container">
-                    <button type="button" class="layui-btn layui-btn-normal" id="btn">确认/Confirm</button>
-                    <a type="button" class="layui-btn layui-btn-normal" href="../login.jsp">取消/Cancel</a>
+                    <button type="button" class="layui-btn layui-btn-normal" id="btn">确认</button>
+                    <a type="button" class="layui-btn layui-btn-normal" href="../login.jsp">取消</a>
                 </div>
             </div>
         </div>

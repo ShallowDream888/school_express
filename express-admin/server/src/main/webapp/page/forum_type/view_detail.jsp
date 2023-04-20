@@ -35,9 +35,9 @@
                     </div>
                 </form>
                 <div class="layui-btn-container">
-                    <a href="#" type="button" class="layui-btn layui-btn-normal login" id="submit">确认/Confirm</a>
+                    <a href="#" type="button" class="layui-btn layui-btn-normal login" id="submit">确认</a>
                     <a href="./table.jsp" target="main_self_frame" type="button"
-                       class="layui-btn layui-btn-normal login">取消/Cancel</a>
+                       class="layui-btn layui-btn-normal login">取消</a>
                 </div>
             </div>
         </div>

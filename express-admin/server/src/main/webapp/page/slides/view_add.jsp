@@ -69,14 +69,14 @@
                             class="layui-btn layui-btn-normal"
                             id="submit"
                     >
-                        确认/Confirm
+                        确认
                     </button>
                     <a
                             href="./table.jsp"
                             type="button"
                             class="layui-btn layui-btn-normal"
                             target="main_self_frame"
-                    >取消/Cancel</a
+                    >取消</a
                     >
                 </div>
             </div>

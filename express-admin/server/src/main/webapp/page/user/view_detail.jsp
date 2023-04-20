@@ -137,14 +137,14 @@
                             class="layui-btn layui-btn-normal"
                             id="submit"
                     >
-                        确认/Confirm
+                        确认
                     </button>
                     <button
                             type="button"
                             class="layui-btn layui-btn-normal"
                             id="cancel"
                     >
-                        取消/Cancel
+                        取消
                     </button>
                 </div>
             </div>

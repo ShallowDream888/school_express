@@ -52,8 +52,8 @@
                     </div>
                 </form>
                 <div class="layui-btn-container">
-                    <a type="button" class="layui-btn layui-btn-normal" id="tijao">确认/Confirm</a>
-                    <button type="button" class="layui-btn layui-btn-normal" id="cancel">取消/Cancel</button>
+                    <a type="button" class="layui-btn layui-btn-normal" id="tijao">确认</a>
+                    <button type="button" class="layui-btn layui-btn-normal" id="cancel">取消</button>
                 </div>
             </div>
         </div>
