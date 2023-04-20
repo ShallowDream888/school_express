@@ -64,7 +64,7 @@
                         <label class="layui-form-label">手机号码</label>
                         <div class="layui-input-block">
                             <input type="text" name="title" lay-verify="title" autocomplete="off"
-                                   placeholder="用户的手机号码，用于找回密码时或登录/Login时" class="layui-input"
+                                   placeholder="用户的手机号码，用于找回密码时或登录时" class="layui-input"
                                    id="number">
                         </div>
                     </div>
@@ -78,7 +78,7 @@
                         <label class="layui-form-label">邮箱</label>
                         <div class="layui-input-block">
                             <input type="text" name="title" lay-verify="title" autocomplete="off"
-                                   placeholder="用户的邮箱，用于找回密码时或登录/Login时" class="layui-input" id="email">
+                                   placeholder="用户的邮箱，用于找回密码时或登录时" class="layui-input" id="email">
                         </div>
                     </div>
                 </form>

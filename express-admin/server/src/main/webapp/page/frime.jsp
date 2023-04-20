@@ -48,7 +48,7 @@
             <ul class="layui-nav layui-nav-tree" lay-filter="test2" id="uls">
 
                 <li class="layui-nav-item" id="userInfo" style="display: block;">
-                    <a href="javascript:;">个人资料/Personal Data</a>
+                    <a href="javascript:;">个人资料</a>
                     <dl class="layui-nav-child">
                         <dd><a href="./info.jsp" target="main_self_frame">个人信息</a></dd>
                         <dd><a href="./change_password.jsp" target="main_self_frame">修改密码</a></dd>
@@ -56,7 +56,7 @@
                 </li>
 
                 <li class="layui-nav-item" id="site" style="display: none;">
-                    <a class="" href="javascript:;">公共管理/Public Manage</a>
+                    <a class="" href="javascript:;">公共管理</a>
                     <dl class="layui-nav-child">
                         <dd><a href="./slides/table.jsp" target="main_self_frame">轮播图</a></dd>
                         <dd><a href="./notice/table.jsp" target="main_self_frame">公告栏</a></dd>
@@ -64,7 +64,7 @@
                 </li>
 
                 <li class="layui-nav-item" id="userManagement" style="display: none;">
-                    <a href="javascript:;">用户管理/User Manage</a>
+                    <a href="javascript:;">用户管理</a>
                     <dl class="layui-nav-child">
                         <dd><a href="./user/table.jsp" target="main_self_frame" id="user">管理员</a></dd>
                         <dd style="display: none" id="employer_user">
@@ -78,7 +78,7 @@
 
 
                 <li class="layui-nav-item" id="content" style="display: none;">
-                    <a href="javascript:;">信息管理/Information Manage</a>
+                    <a href="javascript:;">信息管理</a>
                     <dl class="layui-nav-child">
                         <dd><a href="./forum/table.jsp" target="main_self_frame" id="forum"
                                style="display: none">论坛</a></dd>

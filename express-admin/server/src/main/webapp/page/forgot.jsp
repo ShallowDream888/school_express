@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!-- 密码找回/Retrieve password -->
+<!-- 密码找回 -->
 <!DOCTYPE html>
 <html lang="en" class="forgot">
 
@@ -19,7 +19,7 @@
             <div class="layui-row">
                 <div>
             <span>
-              <h1>密码找回/Retrieve password</h1>
+              <h1>密码找回</h1>
             </span>
                 </div>
                 <form class="layui-form" action="">

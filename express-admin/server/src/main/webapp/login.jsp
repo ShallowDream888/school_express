@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>登录/Login</title>
+    <title>登录</title>
     <link rel="stylesheet" href="./layui/css/layui.css">
     <link rel="stylesheet" href="./css/diy.css">
     <script src="./js/axios.min.js"></script>
@@ -128,9 +128,8 @@
                     <!-- 极验结束 -->
                 </form>
                 <div class="layui-btn-container">
-                    <a type="button" class="layui-btn layui-btn-normal" id="login">登录/Login</a>
-                    <a href="./page/forgot.jsp" type="button" class="layui-btn layui-btn-normal">密码找回/Retrieve
-                        password</a>
+                    <a type="button" class="layui-btn layui-btn-normal" id="login">登录</a>
+                    <a href="./page/forgot.jsp" type="button" class="layui-btn layui-btn-normal">密码找回</a>
                 </div>
             </div>
         </div>
@@ -176,7 +175,7 @@
         }
     }
 
-    // 登录/Login
+    // 登录
     let info
     btn.onclick = async function () {
         if (account.value === '') {
