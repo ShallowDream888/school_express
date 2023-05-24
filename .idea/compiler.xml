@@ -8,11 +8,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ssm" />
+        <module name="project-ssm" />
         <module name="jsp" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="jsp" target="1.8" />
+      <module name="project-ssm" target="1.8" />
       <module name="ssm" target="1.8" />
     </bytecodeTargetLevel>
   </component>

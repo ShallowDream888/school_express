@@ -3,6 +3,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/express-admin/server" />
     <file type="web" url="file://$PROJECT_DIR$/express-parent" />
+    <file type="web" url="file://$PROJECT_DIR$/server" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
