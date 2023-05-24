@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/express-admin/server/jsp.iml" filepath="$PROJECT_DIR$/express-admin/server/jsp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/server/project-ssm.iml" filepath="$PROJECT_DIR$/server/project-ssm.iml" />
       <module fileurl="file://$PROJECT_DIR$/express-parent/ssm.iml" filepath="$PROJECT_DIR$/express-parent/ssm.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/校园快递代领系统.iml" filepath="$PROJECT_DIR$/.idea/校园快递代领系统.iml" />
     </modules>

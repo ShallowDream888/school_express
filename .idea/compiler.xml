@@ -8,7 +8,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ssm" />
-        <module name="project-ssm" />
         <module name="jsp" />
       </profile>
     </annotationProcessing>
